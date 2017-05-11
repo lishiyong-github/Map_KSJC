@@ -10,6 +10,11 @@
 		334FD2EF1DAE34CB00996FD6 /* InfomationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 334FD2EE1DAE34CB00996FD6 /* InfomationView.m */; };
 		334FD2F11DAE350900996FD6 /* InfomationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 334FD2F01DAE350900996FD6 /* InfomationView.xib */; };
 		62B2FE6431B8C5EC8F3C3233 /* libPods-KSJC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 507C6620744F117720307933 /* libPods-KSJC.a */; };
+		9CA741DB1EC4566200D87F80 /* LSYShowMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA741D41EC4566200D87F80 /* LSYShowMsg.m */; };
+		9CA741DC1EC4566200D87F80 /* SKBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA741D61EC4566200D87F80 /* SKBounceAnimation.m */; };
+		9CA741DD1EC4566200D87F80 /* XAspext-ShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA741D71EC4566200D87F80 /* XAspext-ShowController.m */; };
+		9CA741DE1EC4566200D87F80 /* ZAActivityBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9CA741D81EC4566200D87F80 /* ZAActivityBar.bundle */; };
+		9CA741DF1EC4566200D87F80 /* ZAActivityBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA741DA1EC4566200D87F80 /* ZAActivityBar.m */; };
 		C12C047A1E1F258A008EF449 /* OMServiceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C12C04791E1F258A008EF449 /* OMServiceLayer.m */; };
 		C13772C71E237C8C00A0CC57 /* AGSGraphic+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = C13772C61E237C8C00A0CC57 /* AGSGraphic+Extention.m */; };
 		C1477F1C1E1E2EA3007835E6 /* OMBaseServiceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C1477F1B1E1E2EA3007835E6 /* OMBaseServiceInfo.m */; };
@@ -677,6 +682,14 @@
 		507C6620744F117720307933 /* libPods-KSJC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KSJC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55FC424ADFE94C63D9A188ED /* Pods-KSJC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSJC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KSJC/Pods-KSJC.debug.xcconfig"; sourceTree = "<group>"; };
 		926787D810BDD2A784DAF132 /* Pods-KSJC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSJC.release.xcconfig"; path = "Pods/Target Support Files/Pods-KSJC/Pods-KSJC.release.xcconfig"; sourceTree = "<group>"; };
+		9CA741D31EC4566200D87F80 /* LSYShowMsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSYShowMsg.h; sourceTree = "<group>"; };
+		9CA741D41EC4566200D87F80 /* LSYShowMsg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSYShowMsg.m; sourceTree = "<group>"; };
+		9CA741D51EC4566200D87F80 /* SKBounceAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKBounceAnimation.h; sourceTree = "<group>"; };
+		9CA741D61EC4566200D87F80 /* SKBounceAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKBounceAnimation.m; sourceTree = "<group>"; };
+		9CA741D71EC4566200D87F80 /* XAspext-ShowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XAspext-ShowController.m"; sourceTree = "<group>"; };
+		9CA741D81EC4566200D87F80 /* ZAActivityBar.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZAActivityBar.bundle; sourceTree = "<group>"; };
+		9CA741D91EC4566200D87F80 /* ZAActivityBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAActivityBar.h; sourceTree = "<group>"; };
+		9CA741DA1EC4566200D87F80 /* ZAActivityBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAActivityBar.m; sourceTree = "<group>"; };
 		C12C04781E1F258A008EF449 /* OMServiceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMServiceLayer.h; sourceTree = "<group>"; };
 		C12C04791E1F258A008EF449 /* OMServiceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMServiceLayer.m; sourceTree = "<group>"; };
 		C13772C51E237C8C00A0CC57 /* AGSGraphic+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AGSGraphic+Extention.h"; sourceTree = "<group>"; };
@@ -1625,6 +1638,21 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		9CA741D21EC4566200D87F80 /* LSYShowController */ = {
+			isa = PBXGroup;
+			children = (
+				9CA741D31EC4566200D87F80 /* LSYShowMsg.h */,
+				9CA741D41EC4566200D87F80 /* LSYShowMsg.m */,
+				9CA741D51EC4566200D87F80 /* SKBounceAnimation.h */,
+				9CA741D61EC4566200D87F80 /* SKBounceAnimation.m */,
+				9CA741D71EC4566200D87F80 /* XAspext-ShowController.m */,
+				9CA741D81EC4566200D87F80 /* ZAActivityBar.bundle */,
+				9CA741D91EC4566200D87F80 /* ZAActivityBar.h */,
+				9CA741DA1EC4566200D87F80 /* ZAActivityBar.m */,
+			);
+			path = LSYShowController;
+			sourceTree = "<group>";
+		};
 		C17EE5B21E1CD632003CDABF /* ThemeTree */ = {
 			isa = PBXGroup;
 			children = (
@@ -1722,6 +1750,7 @@
 				C662E8241D8E21E000F66DDB /* Assets.xcassets */,
 				C662E8261D8E21E000F66DDB /* LaunchScreen.storyboard */,
 				C662E8291D8E21E000F66DDB /* Info.plist */,
+				9CA741D21EC4566200D87F80 /* LSYShowController */,
 				C662E8181D8E21E000F66DDB /* Supporting Files */,
 			);
 			path = KSJC;
@@ -3487,6 +3516,7 @@
 				C662E9D91D8E232E00F66DDB /* maptool-locate.png in Resources */,
 				C1E263091E5189FB009A2C54 /* location@2x.png in Resources */,
 				C662EC481D8E235F00F66DDB /* wei_red@2x.png in Resources */,
+				9CA741DE1EC4566200D87F80 /* ZAActivityBar.bundle in Resources */,
 				C662EBBC1D8E235F00F66DDB /* filetype-excel72.png in Resources */,
 				C662E9E61D8E232E00F66DDB /* maptool-year@2x.png in Resources */,
 				C662E9F31D8E232E00F66DDB /* storage-stat.png in Resources */,
@@ -3660,6 +3690,7 @@
 				C6945CEE1DC9C2FD00A69CB3 /* OMapViewController+ServiceLoader.m in Sources */,
 				C6945CC21DC9C26200A69CB3 /* NoticeItemView.m in Sources */,
 				C6945CC11DC9C26200A69CB3 /* MearsureView.m in Sources */,
+				9CA741DD1EC4566200D87F80 /* XAspext-ShowController.m in Sources */,
 				C6D3B81C1DCB3C5600D174BF /* AFURLSessionManager.m in Sources */,
 				C17EE5C11E1CE070003CDABF /* ZJSwitch.m in Sources */,
 				C6F1859F1DF0029300A0C0E7 /* BaseMessageCell.m in Sources */,
@@ -3671,6 +3702,7 @@
 				C68234D41DFFBB6A000116D5 /* MJRefreshBackFooter.m in Sources */,
 				C662E9001D8E232500F66DDB /* FolderViewController.m in Sources */,
 				C6945CA71DC9C26200A69CB3 /* EAIntroPage.m in Sources */,
+				9CA741DF1EC4566200D87F80 /* ZAActivityBar.m in Sources */,
 				C6F687A51DFA91D800B66F9E /* ProjectBaseMessageCell.m in Sources */,
 				C6945CC01DC9C26200A69CB3 /* MapSearchResultPanel.m in Sources */,
 				C662E8A41D8E230F00F66DDB /* DistDateSelector.m in Sources */,
@@ -3689,6 +3721,7 @@
 				C6945CB61DC9C26200A69CB3 /* ResourceSortBarItem.m in Sources */,
 				C662EA701D8E233E00F66DDB /* StopWorkFormView.m in Sources */,
 				C6945CB81DC9C26200A69CB3 /* GPS.m in Sources */,
+				9CA741DB1EC4566200D87F80 /* LSYShowMsg.m in Sources */,
 				C662E8B11D8E230F00F66DDB /* PNBarChart.m in Sources */,
 				C662ECB81D8E237F00F66DDB /* DesktopViewController.m in Sources */,
 				C17EE5BC1E1CE00E003CDABF /* TreeNodeCell.m in Sources */,
@@ -3770,6 +3803,7 @@
 				C6945CA61DC9C26200A69CB3 /* DrawHelper.m in Sources */,
 				C662E8AD1D8E230F00F66DDB /* MZFormSheetSegue.m in Sources */,
 				C6945CBD1DC9C26200A69CB3 /* LayerManager.m in Sources */,
+				9CA741DC1EC4566200D87F80 /* SKBounceAnimation.m in Sources */,
 				C662EA8C1D8E235600F66DDB /* ProjectFormInfo.m in Sources */,
 				C662E8BD1D8E230F00F66DDB /* ModifyPwdViewController.m in Sources */,
 				C662E8A11D8E230F00F66DDB /* DistCalendarItem.m in Sources */,
@@ -3953,7 +3987,7 @@
 					"-framework",
 					ArcGIS,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dist.KSJCtest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dist.KSJCMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv7s armv7";
 			};
@@ -3982,7 +4016,7 @@
 					"-framework",
 					ArcGIS,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dist.KSJCtest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dist.KSJCMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv7s armv7";
 			};

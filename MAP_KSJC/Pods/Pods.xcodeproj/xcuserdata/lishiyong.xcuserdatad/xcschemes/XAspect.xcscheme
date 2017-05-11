@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'BB1A44A81C0E40D5E8269ED28E546B4C'
-               BlueprintName = 'Pods-KSJC'
+               BlueprintIdentifier = '1703A4FA649640FBA335A3ACDF68694C'
+               BlueprintName = 'XAspect'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-KSJC.a'>
+               BuildableName = 'libXAspect.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -5,4 +5,5 @@ platform :ios, "8.0"
 target :'KSJC' do
 
 pod 'AMap3DMap'
+pod 'XAspect', '~> 1.0.5'
 end

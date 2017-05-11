@@ -9,10 +9,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>XAspect.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>292BEC8A652F1F4D1860AFAF34ACD430</key>
+		<key>1703A4FA649640FBA335A3ACDF68694C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BB1A44A81C0E40D5E8269ED28E546B4C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
