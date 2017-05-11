@@ -1,0 +1,375 @@
+﻿<html>
+<head>
+    <title>form</title>
+    <meta name="viewport" content="width=480, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no"/>
+    <style type="text/css">
+        html,body{ font-family:"微软雅黑"; font-size:14px;}
+        .fieldItem{min-height:40px; line-height:30px; margin:5px;}
+        .nameSpan{background-color:#67d8c6; color:white; padding:5 10px;}
+        
+        /*表单*/
+        .form-selector-box{height:30px; border-bottom:solid 1px #999999; line-height:30px;}
+        .form-selector-box select{-webkit-appearance: none; height:30px; border:none; font-size:12px;padding-left:20px;padding-right:20px;background-image:url(Img/dropdown.png);background-repeat:no-repeat; background-position:center right;}
+        .form-detail-box{overflow:hidden; position:relative;}
+        .form-item{min-height:30px; line-height:30px; margin:10px 0px; clear:both;}
+        .form-textarea-row{height:120px;}
+        .form-item-name{float:left; min-height:25px; line-height:25px; margin:0px 10px; background-color:#45853e;border-radius:5px; text-align:center; padding:0px 5px; font-size:13px; color:White; }
+        .form-none{background:none !important}
+        .form-item-input{float:left;}
+        .form-item-input .disabled{background-color:#cccccc;}
+        .form-item-input input{height:25px; width:330px; border-radius:0px; border:none; background-color:#FFFFFF; border-bottom:solid 1px #999999; position:absolute; right:10px;}
+        .form-item-input textarea{height:100px;width:330px; border-radius:0px; position:absolute; right:10px;}
+        .form-item-input textarea{height:105px; border:solid 1px #999999;}
+        .form-item-input .button{min-width:60px; float:left; height:25px; margin-left:20px; line-height:25px; text-align:center; background-color:green; color:White;}
+        .form-toolbar{height:60px; background-color:#74d3eb;}
+        .form-toolbar DIV{float:right; width:75px; height:60px; background-position:center; background-repeat:no-repeat;}
+        .form-toolbar-send{background-image:url(img/send.png)}
+        .form-toolbar-sendback{background-image:url(img/sendback.png)}
+        .form-toolbar-save{background-image:url(img/save.png)}
+        .form-toolbar-goback{background-image:url(img/close2.png)}
+        
+        .form-selector-box select{}
+        .form-table{border-collapse:collapse;margin-bottom:30px; margin-right:10px table-layout:fixed; min-width:1000px; font-size:12px;}
+        .form-table tr th{border:solid 1px #ccc; background-color:#dadada;height:20px; line-height:30px;}
+        .form-table tr td{border:solid 1px #ccc; text-align:center; height:25px; line-height:25px;}
+    </style>
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="dist.ipad.touchlink.js"></script>
+   
+</head>
+<body>
+  <!--<div>
+<input  type="button" value="提交" onclick="createSaveXml();"/>
+<input  type="button" value="切换" onclick="switchView(0);"/>
+</div>-->
+   <div id="form-detail-view" style=" float:left; display:block">
+   </div>
+   
+   <div id="form-detail-update" style=" float:left; display:none" >
+   </div>
+</body>
+ <script type="text/javascript">
+     var formDetailView = document.getElementById("form-detail-view");
+     var formDetailUpdate = document.getElementById("form-detail-update");
+     var controls = {};
+     
+     
+     
+     //点击编辑
+     function switchView(flag){
+        if (flag == 0){//编辑
+            
+            formDetailView.style.display = "none";
+            formDetailUpdate.style.display = "block";
+        }else if(flag == 1){//取消修改
+            formDetailView.style.display = "block";
+            formDetailUpdate.style.display = "none";
+        }
+     }
+     
+     function loadForm(json) {
+         document.body.innerHTML = '';
+         //document.body.scrollTo(0,0);
+         var data = eval(json);
+         for (var i = 0; i < data.length; i++) {
+             var fieldItem = document.createElement('DIV');
+             var nameSpan = document.createElement('span');
+             var valueSpan = document.createElement('span');
+             fieldItem.className = 'fieldItem';
+             nameSpan.className = 'nameSpan';
+             nameSpan.innerText = data[i].text;
+             valueSpan.innerText = '   ' + data[i].value;
+             fieldItem.appendChild(nameSpan);
+             fieldItem.appendChild(valueSpan);
+             document.body.appendChild(fieldItem);
+         }
+     }
+
+     function clear() {
+         //document.body.innerHTML = '';
+         formDetailView.innerHTML = '' ;
+         formDetailUpdate.innerHTML = '' ;
+     }
+ 
+     //创建
+     function createFormPanel(data) {
+         formDetailView.style.display="block";
+         formDetailUpdate.style.display="none";
+         formDetailView.innerHTML = '' ;
+         formDetailUpdate.innerHTML = '' ;
+         //var data=eval(json);
+         var df = document.createDocumentFragment();
+         for (var i = 0; i < data.length; i++) {
+             var control = createFormControl(data[i],true);
+             if (control)
+                 df.appendChild(control);
+         }
+         formDetailUpdate.appendChild(df);
+
+         var df2 = document.createDocumentFragment();
+         for (var i = 0; i < data.length; i++) {
+             var control2 = createFormControl(data[i],false);
+             if (control2)
+                 df2.appendChild(control2);
+         }
+         formDetailView.appendChild(df2);
+     }
+
+     function createFormControl(item,editable) {
+         
+         var div = document.createElement('DIV');
+         if(item.extensionType=='数据网格'){
+             div.appendChild(createGrid(item.grid));
+             return div;
+         }
+         if(item.value==undefined)
+            item.value='';
+         div.className = 'form-item';
+         var nameDiv = document.createElement('DIV');
+         nameDiv.className = 'form-item-name';
+         nameDiv.innerText = item.text;
+         var valDiv = document.createElement('DIV');
+         valDiv.className = 'form-item-input';
+
+         var input = null;
+         var input2 = null;
+
+
+         if (editable) {
+             if (item.extensionType == '文本框') {
+                 input = document.createElement('INPUT');
+             }
+             
+             else if (item.extensionType == '意见按钮' || item.extensionType == '签阅意见按钮') {
+                 input = document.createElement('INPUT');
+                 input.setAttribute('placeHoler', '输入意见');
+                 input.setAttribute('notsubmit', true);
+                 nameDiv.innerText = '';
+                 input2 = document.createElement('DIV');
+                 input2.className = 'button';
+                 input2.innerText = '提交意见';
+                 input2.setAttribute('to', item.to);
+                 input2.setAttribute('for', 'form-' + item.field);
+                 nameDiv.className = 'form-item-name form-none';
+                 $(input2).touchlink().bind('touchend click', function() {
+                     onBtnSignClick(this);
+                 });
+             } else if (item.extensionType == '签字口令框') {
+                 input = document.createElement('INPUT');
+                 if (item.readonly == "false") {
+                     input2 = document.createElement('DIV');
+                     input2.className = 'button';
+                     input2.innerText = '签名';
+                     input2.setAttribute('to', item.to);
+                     input2.setAttribute('for', 'form-' + item.field);
+                     $(input2).touchlink().bind('touchend click', function() {//click
+                         onBtnSignClick2(this);
+                     });
+                 }
+             }
+             else if (item.extensionType == '日期框' || item.extensionType=='日期框(默认当前日期)') {
+                input = document.createElement('INPUT');
+                
+                input.setAttribute('dataType','date');
+                //input.onfocus=onDateInputFocus;
+                input.setAttribute('placeHolder', '如:2013-01-01');
+                if(item.readonly != "true"){
+                    input.style.width = '240px';
+                    input.style.right = '100px';
+                    input2 = document.createElement('input');
+                    input2.type = 'button';
+                    input2.style.width = '80px';
+                    input2.value = '选择日期';
+                    input2.onclick = chooseDate;
+                    input2.setAttribute('for', 'form-' + item.field);
+                }
+             }
+              
+             else if (item.extensionType == '多行文本框') {
+                 input = document.createElement('TEXTAREA');
+                 div.className = 'form-item form-textarea-row';
+             }  else if (item.extensionType == '下拉框') {
+                 input = document.createElement('SELECT');
+                 for (var i = 0; i < item.dataSource.length; i++) {
+                     var d = item.dataSource[i];
+                     var option = new Option(d.name, d.value);
+                     input.options[i] = option;
+                 }
+             } else
+                 return null;
+             if (item.value != undefined)
+                 input.value = item.value;
+
+             input.setAttribute('old', item.value);
+             input.setAttribute('field', item.field);
+             input.setAttribute('table', item.table);
+             input.id = 'form-' + item.field;
+             if (!controls[item.table])
+                 controls[item.table] = {};
+             controls[item.table][item.id] = input;
+             input.setAttribute('label',item.text);
+             valDiv.appendChild(input);
+             if (input2)
+                 valDiv.appendChild(input2);
+             //input.disabled = item.readonly == "true";
+             //....fjx
+             if (item.readonly == "true" || item.extensionType == '签字口令框') {
+                 input.disabled = true;
+             } else {
+                 input.disabled = false;
+             }
+             if (input.disabled)
+                 input.className += ' disabled';
+         } else {
+             valDiv.innerText = item.value;
+         }
+         
+         div.appendChild(nameDiv);
+         div.appendChild(valDiv);
+         return div;
+     }
+ 
+    function createGrid(data){
+        var table = document.createElement('table');
+        table.className = 'form-table';
+        table.setAttribute('cellpadding','0');
+        table.setAttribute('cellspacing','0');
+        var head = document.createElement('tr');
+        for(var i=0;i<data.columns.length;i++){
+            var th = document.createElement('th');
+            th.innerText = data.columns[i].label;
+            head.appendChild(th);
+        }
+        table.appendChild(head);
+        for(var i=0;i<data.rows.length;i++){
+            var tr = document.createElement('tr');
+            var rowData = data.rows[i];
+            for(var k=0;k<data.columns.length;k++){
+                var columnName = data.columns[k].name;
+                var td = document.createElement('td');
+                td.innerText = rowData[columnName];
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+        return table;
+    }
+
+     function onBtnSignClick(sender) {
+         var forInput = dist.$g(sender.getAttribute('for'));
+         var val = forInput.value;
+         if (val == '') {
+             return;
+         }
+         //根据控件引用关系获得目标对象
+         var to = sender.getAttribute('to');
+         var target = null;
+         for (var t in this.controls) {
+             var f = this.controls[t];
+             target = f[to];
+             if (target)
+                 break;
+         }
+         if (!target)
+             return;
+         var today = new Date();
+         target.value += '\n' + val + '\t填写人：' + dist.un + '\t日期：' + today.getFullYear() + '年' + (today.getMonth() + 1) + '月' + today.getDate() + '日';
+         sender.parentNode.parentNode.style.display = 'none';
+     }
+
+     function onBtnSignClick2(sender) {
+         sender.style.display = "none";
+         var forInput = dist.$g(sender.getAttribute('for'));
+         forInput.value = dist.uname;
+         //根据控件引用关系获得目标对象
+         var to = sender.getAttribute('to');
+         var target = null;
+         for (var t in this.controls) {
+             var f = this.controls[t];
+             target = f[to];
+             if (target)
+                 break;
+         }
+         if (!target)
+             return;
+         var today = new Date();
+         target.value = today.getFullYear() + '/' + (today.getMonth() + 1) + '/' + today.getDate();
+     }
+//点击提交
+     function createSaveXml() {
+         var changed = false;
+         var formXml = '<root>';
+         for (var t in this.controls) {
+             var items = this.controls[t];
+             formXml += '<' + t + '>';
+             for (var f in items) {
+                 var input = items[f];
+                 if (input.getAttribute('notsubmit')) {
+                     continue;
+                 }
+                 var nowVal = input.value;
+                 var oldVal = input.getAttribute('old');
+                 if (nowVal != oldVal) {
+                     var dt = input.getAttribute('dataType');
+                     if(dt=='date' && !isDate(nowVal)){
+                         alert(input.getAttribute('label')+'输入错误，请输入正确的日期');
+                         input.focus();
+                         return;
+                     }
+                     changed = true;
+                     var field = input.getAttribute('field');
+                     formXml += '<' + field + '><![CDATA[' + nowVal + ']]></' + field + '>';
+                 }
+             }
+             formXml += '</' + t + '>';
+         }
+         formXml += '</root>';
+         if (!changed){
+             window.location.href="command::::save:::-::-"
+             return null;
+         }
+         
+          var data="";
+          for (var t in this.controls) {
+              var items = this.controls[t];
+              for (var f in items) {
+                  var input = items[f];
+                  if (input.getAttribute('notsubmit')) {
+                      continue;
+                  }
+                  var nowVal = input.value;
+                  var oldVal = input.getAttribute('old');
+                  if (nowVal != oldVal) {
+                      data=data+f+"4g,v"+nowVal+"5f;n";
+                  }
+              }
+              
+          }
+          
+          formXml=formXml+"::"+data;
+         
+         //return formXml;
+         window.location.href="command::::save:::"+formXml;
+     }
+ 
+     function isDate(dateStr) {
+         if(dateStr){
+             var regex = new RegExp("^(?:(?:([0-9]{4}(-|\/)(?:(?:0?[1,3-9]|1[0-2])(-|\/)(?:29|30)|((?:0?[13578]|1[02])(-|\/)31)))|([0-9]{4}(-|\/)(?:0?[1-9]|1[0-2])(-|\/)(?:0?[1-9]|1\\d|2[0-8]))|(((?:(\\d\\d(?:0[48]|[2468][048]|[13579][26]))|(?:0[48]00|[2468][048]00|[13579][26]00))(-|\/)0?2(-|\/)29))))$");
+             return regex.test(dateStr);
+         }
+         return true;
+     }
+ 
+    var currentDateControl;
+    function chooseDate(event){
+        var sender = event.srcElement;
+        currentDateControl = document.getElementById(sender.getAttribute("for"));
+        window.location.href = "command::::datepick:::"+currentDateControl.value;
+    }
+ 
+    function setDateVal(dateStr){
+        currentDateControl.value = dateStr;
+    }
+    </script>
+</html>

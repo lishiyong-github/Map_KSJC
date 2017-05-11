@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch.iPad" variant="6xAndEarlier" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="uko-uj-Tqo" customClass="JobDetailView">
+            <rect key="frame" x="0.0" y="0.0" width="723" height="700"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="FgL-aH-8mM">
+                    <rect key="frame" x="493" y="99" width="1" height="602"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正在下载..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YD5-Rg-P03">
+                    <rect key="frame" x="323" y="67" width="76" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9g7-JE-Vsk">
+                    <rect key="frame" x="0.0" y="0.0" width="723" height="45"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" id="ghF-zM-nGg">
+                    <rect key="frame" x="0.0" y="97" width="723" height="1"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <tableView clipsSubviews="YES" tag="200" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gtc-Y8-9jp">
+                    <rect key="frame" x="500" y="106" width="215" height="475"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
+                    <connections>
+                        <outlet property="dataSource" destination="uko-uj-Tqo" id="bV7-Nk-ffG"/>
+                        <outlet property="delegate" destination="uko-uj-Tqo" id="KJg-KG-d2u"/>
+                    </connections>
+                </tableView>
+                <webView contentMode="scaleToFill" id="Bgk-hM-L9S">
+                    <rect key="frame" x="0.0" y="100" width="493" height="320"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </webView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="监察记录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mGs-ld-ija">
+                    <rect key="frame" x="0.0" y="470" width="198" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Eou-Hg-hAB">
+                    <rect key="frame" x="420" y="460" width="73" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="添加巡查"/>
+                </button>
+                <tableView clipsSubviews="YES" tag="3" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="H1F-WQ-vsd">
+                    <rect key="frame" x="0.0" y="430" width="492" height="280"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <tableView clipsSubviews="YES" tag="30" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wT5-o4-IlS">
+                    <rect key="frame" x="0.0" y="430" width="492" height="280"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" id="4Xr-I7-Tdv">
+                    <rect key="frame" x="494" y="658" width="229" height="53"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cMZ-Gw-d7b" customClass="SysButton">
+                            <rect key="frame" x="0.0" y="0.0" width="118" height="53"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="编辑表单">
+                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onModifyFormDetail:" destination="uko-uj-Tqo" eventType="touchUpInside" id="Wf2-X1-GvZ"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KYv-1x-Cy3" customClass="SysButton">
+                            <rect key="frame" x="118" y="0.0" width="118" height="53"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="发送">
+                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onBtnSendTap:" destination="-2" eventType="touchUpInside" id="O3L-pR-1lu"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="36S-xm-fuq" customClass="SysButton">
+                            <rect key="frame" x="0.0" y="0.0" width="118" height="53"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="提交">
+                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onDoFormDetail:" destination="uko-uj-Tqo" eventType="touchUpInside" id="diz-QU-e8M"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="I0P-Gu-cXc" customClass="SysButton">
+                            <rect key="frame" x="118" y="0.0" width="111" height="53"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="取消修改">
+                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onCancelFormDetail:" destination="uko-uj-Tqo" eventType="touchUpInside" id="CpE-zt-7Te"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" id="Wy5-tM-xbE">
+                    <rect key="frame" x="100" y="65" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" id="ky8-DO-ydk">
+                    <rect key="frame" x="600" y="200" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
+                <view hidden="YES" alpha="0.29999999999999999" contentMode="scaleToFill" id="Wh2-ZX-W6A">
+                    <rect key="frame" x="0.0" y="0.0" width="2" height="2"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Spv-qY-lqU" customClass="SysButton">
+                    <rect key="frame" x="319" y="63" width="90" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="下载" image="button-download.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onDownLoadItemTap:" destination="uko-uj-Tqo" eventType="touchUpInside" id="i6v-OU-7j2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AqI-Lq-Ml6" customClass="SysButton">
+                    <rect key="frame" x="613" y="53" width="90" height="39"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="定位" image="locationProject.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onBtnLationProject:" destination="uko-uj-Tqo" eventType="touchUpInside" id="3nv-a3-Ldn"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="G7L-vE-3iH" customClass="SysButton">
+                    <rect key="frame" x="417" y="53" width="90" height="39"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="照片" image="button-photos.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onBtnOpenPhotoList:" destination="uko-uj-Tqo" eventType="touchUpInside" id="lPC-jw-7mg"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zJu-Am-ke7" customClass="SysButton">
+                    <rect key="frame" x="613" y="53" width="105" height="39"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="停工单" image="button-phxmfb.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onStopworkMenuItemTap:" destination="uko-uj-Tqo" eventType="touchUpInside" id="nM4-pK-QkW"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dJN-Yn-2pl" customClass="SysButton">
+                    <rect key="frame" x="510" y="53" width="95" height="39"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="整改单" image="button-phxmfb.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onBtnCorrectiveTap:" destination="uko-uj-Tqo" eventType="touchUpInside" id="AZM-l5-MZW"/>
+                    </connections>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" id="uWX-eH-BK2">
+                    <rect key="frame" x="0.0" y="100" width="723" height="620"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" id="2TG-il-EDq">
+                            <rect key="frame" x="0.0" y="0.0" width="700" height="558"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="无照片" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xxl-Xq-Awm">
+                                    <rect key="frame" x="333" y="264" width="62" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </scrollView>
+                        <view contentMode="scaleToFill" id="hsf-Jh-eJZ">
+                            <rect key="frame" x="0.0" y="559" width="723" height="1"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bSD-fK-bdL" customClass="SysButton">
+                            <rect key="frame" x="90" y="568" width="107" height="39"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="拍照" image="button-camera.png">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onCameraMenuItemTap:" destination="uko-uj-Tqo" eventType="touchUpInside" id="u6A-7D-34V"/>
+                                <action selector="onCameraMenuItemTap:" destination="uko-uj-Tqo" eventType="touchUpOutside" id="w78-wE-Kra"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YJ6-5x-8Zj" customClass="SysButton">
+                            <rect key="frame" x="199" y="568" width="124" height="36"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="修改名称" image="button-dqgz.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onBtnRenamePhotoTap:" destination="uko-uj-Tqo" eventType="touchUpInside" id="qWW-CI-ASS"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="W0F-Fd-5Gw" customClass="SysButton">
+                            <rect key="frame" x="340" y="568" width="124" height="36"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="移除照片" image="button-delete.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onBtnDeletePhotoTap:" destination="uko-uj-Tqo" eventType="touchUpInside" id="bDE-7Q-caG"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6LX-qn-VAl" customClass="SysButton">
+                            <rect key="frame" x="456" y="568" width="150" height="36"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="同步照片" image="button-cloud.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onBtnSubmitPhotoTap:" destination="uko-uj-Tqo" eventType="touchUpInside" id="B9V-IH-dGI"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="T2G-rm-Gd6" customClass="SysButton">
+                            <rect key="frame" x="635" y="568" width="76" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="返回" image="ht.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onBtnClosePhotoList:" destination="uko-uj-Tqo" eventType="touchUpInside" id="707-cK-nXj"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SRc-If-3I6" customClass="SysButton">
+                    <rect key="frame" x="62" y="62" width="218" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onFormList:" destination="uko-uj-Tqo" eventType="touchUpInside" id="2nZ-dg-dRC"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="表单：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jHD-on-Ht3">
+                    <rect key="frame" x="10" y="65" width="42" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view hidden="YES" contentMode="scaleToFill" id="Sg4-Ge-fD6">
+                    <rect key="frame" x="0.0" y="46" width="810" height="722"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="没有网络" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eJ9-ag-09z">
+                            <rect key="frame" x="327" y="302" width="157" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sEC-ho-HQo" customClass="SysButton">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="45"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="返回" image="button-back.png">
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onBtnGoback:" destination="uko-uj-Tqo" eventType="touchUpInside" id="r67-kA-t3t"/>
+                    </connections>
+                </button>
+            </subviews>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnBackToMap" destination="sEC-ho-HQo" id="z37-KL-N5D"/>
+                <outlet property="btnCancelFormDetail" destination="I0P-Gu-cXc" id="2nx-xI-tZ2"/>
+                <outlet property="btnClosePhotoList" destination="T2G-rm-Gd6" id="IED-fl-aft"/>
+                <outlet property="btnCorrective" destination="dJN-Yn-2pl" id="oaO-bw-W1A"/>
+                <outlet property="btnDeletePhoto" destination="W0F-Fd-5Gw" id="ucL-qV-wVM"/>
+                <outlet property="btnDoFormDetail" destination="36S-xm-fuq" id="5tR-uU-lZu"/>
+                <outlet property="btnFormName" destination="SRc-If-3I6" id="gjW-zc-POf"/>
+                <outlet property="btnGetPhoto" destination="bSD-fK-bdL" id="iDm-MV-bgi"/>
+                <outlet property="btnLocation" destination="AqI-Lq-Ml6" id="OQS-nl-LF4"/>
+                <outlet property="btnModifyFormDetail" destination="cMZ-Gw-d7b" id="XMj-jX-yXF"/>
+                <outlet property="btnPhotos" destination="G7L-vE-3iH" id="KTc-Yg-s0L"/>
+                <outlet property="btnRenamePhoto" destination="YJ6-5x-8Zj" id="PQV-fb-ljM"/>
+                <outlet property="btnSend" destination="KYv-1x-Cy3" id="OB2-WA-CHr"/>
+                <outlet property="btnStopwork" destination="zJu-Am-ke7" id="qtN-CW-xrt"/>
+                <outlet property="btnSubmitPhoto" destination="6LX-qn-VAl" id="r2o-gv-ezl"/>
+                <outlet property="formActivityIndicator" destination="Wy5-tM-xbE" id="iie-WU-Aax"/>
+                <outlet property="formWebView" destination="Bgk-hM-L9S" id="D0T-pP-oLG"/>
+                <outlet property="lblDownStatus" destination="YD5-Rg-P03" id="jbb-Rh-xga"/>
+                <outlet property="lblNoImg" destination="xxl-Xq-Awm" id="kwd-wg-5eu"/>
+                <outlet property="lblProjectName" destination="9g7-JE-Vsk" id="oeZ-bL-U0V"/>
+                <outlet property="logTableView" destination="H1F-WQ-vsd" id="Scs-7L-HhB"/>
+                <outlet property="maskView" destination="Wh2-ZX-W6A" id="Ej1-9k-MhT"/>
+                <outlet property="materialActivityIndicator" destination="ky8-DO-ydk" id="wxd-Ee-76u"/>
+                <outlet property="materialTable" destination="gtc-Y8-9jp" id="2Fp-xe-Ozk"/>
+                <outlet property="offlineView" destination="Sg4-Ge-fD6" id="jhp-VZ-QLn"/>
+                <outlet property="phLogTableView" destination="wT5-o4-IlS" id="9Br-e0-bvr"/>
+                <outlet property="photoView" destination="uWX-eH-BK2" id="Pdv-JD-Gjb"/>
+                <outlet property="thumbPhotoContainer" destination="2TG-il-EDq" id="EP7-eA-zKw"/>
+                <outlet property="viewOperation" destination="4Xr-I7-Tdv" id="Dfm-6t-4wM"/>
+                <outlet property="viewSplit" destination="FgL-aH-8mM" id="dBw-ct-7IO"/>
+            </connections>
+            <point key="canvasLocation" x="364.5" y="-100"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="button-back.png" width="24" height="24"/>
+        <image name="button-camera.png" width="48" height="32"/>
+        <image name="button-cloud.png" width="48" height="32"/>
+        <image name="button-delete.png" width="48" height="32"/>
+        <image name="button-download.png" width="48" height="32"/>
+        <image name="button-dqgz.png" width="48" height="32"/>
+        <image name="button-photos.png" width="48" height="32"/>
+        <image name="button-phxmfb.png" width="48" height="32"/>
+        <image name="ht.png" width="32" height="32"/>
+        <image name="locationProject.png" width="48" height="32"/>
+    </resources>
+</document>

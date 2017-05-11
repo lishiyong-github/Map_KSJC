@@ -1,0 +1,39 @@
+﻿<html>
+<head>
+    <title>form</title>
+    <meta name="viewport" content="width=521, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no"/>
+    <style type="text/css">
+        html,body{ font-family:"微软雅黑"; font-size:14px;}
+        .fieldItem{min-height:40px; line-height:30px; margin:5px;}
+        .nameSpan{background-color:#67d8c6; color:white; padding:5 10px;}
+    </style>
+    
+    <script type="text/javascript">
+        function loadForm(json){
+            document.body.innerHTML='';
+            //document.body.scrollTo(0,0);
+            var data = eval(json);
+            for(var i=0;i<data.length;i++){
+                var fieldItem = document.createElement('DIV');
+                var nameSpan = document.createElement('span');
+                var valueSpan = document.createElement('span');
+                fieldItem.className = 'fieldItem';
+                nameSpan.className='nameSpan';
+                nameSpan.innerText = data[i].name;
+                valueSpan.innerText = '   '+ data[i].value;
+                fieldItem.appendChild(nameSpan);
+                fieldItem.appendChild(valueSpan);
+                document.body.appendChild(fieldItem);
+            }
+        }
+    
+        function clear(){
+            document.body.innerHTML='';
+        }
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

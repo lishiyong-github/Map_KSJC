@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>执法巡查登记明细</title>
+    <meta name="viewport" content="width=780, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no"/>
+    
+    <style type="text/css">
+        html,body{margin:0px; width:100%; min-width:100px;}
+        input{border:none; border-radius:0px; height:30px; width:150px;font-size:16px;}
+        table{width:600px; border-collapse:collapse; margin:20px;}
+        tr{min-height:40px;}
+        td{border:solid 1px #999999;padding:10px;}
+        textarea{border:none; border-radius:0px; height:100px; width:100%;font-size:16px;}
+    </style>
+    
+    <script type="text/javascript">
+        var editable = true;
+        function setEditable(e) {
+            editable = e;
+            var inputDisplay = editable?'':'none';
+            var spanDispaly = editable ? 'none' : 'inline';
+            document.getElementById("txt2").style.display = inputDisplay;
+            document.getElementById("txt3").style.display = inputDisplay;
+            document.getElementById("txt4").style.display = inputDisplay;
+            document.getElementById("txt5").style.display = inputDisplay;
+            document.getElementById("txt6").style.display = inputDisplay;
+            document.getElementById("lbl2").style.display = spanDispaly;
+            document.getElementById("lbl3").style.display = spanDispaly;
+            document.getElementById("lbl4").style.display = spanDispaly;
+            document.getElementById("lbl5").style.display = spanDispaly;
+            document.getElementById("lbl6").style.display = spanDispaly;
+        }
+
+        function setData(d) {
+            setEditable(editable);
+            document.getElementById("txt1").innerText = d.txt1;
+            document.getElementById("txt2").value=d.txt2;
+            document.getElementById("txt3").value = d.txt3;
+            document.getElementById("txt4").value = d.txt4;
+            document.getElementById("txt5").value = d.txt5;
+            document.getElementById("txt6").value = d.txt6;
+            document.getElementById("lbl2").innerText = d.txt2;
+            document.getElementById("lbl3").innerText = d.txt3;
+            document.getElementById("lbl4").innerText = d.txt4;
+            document.getElementById("lbl5").innerText = d.txt5;
+            document.getElementById("lbl6").innerText = d.txt6;
+            document.getElementById("txt7").innerText = d.txt7;
+        }
+
+        function save() {
+            var saveJson = "{\"txt1\":\"";
+            saveJson += document.getElementById('txt1').innerText.replace("\"", "\\\"") + "\",";
+            saveJson += "\"txt2\":\"" + document.getElementById('txt2').value.replace("\"", "\\\"") + "\",";
+            saveJson += "\"txt3\":\"" + document.getElementById('txt3').value.replace("\"", "\\\"") + "\",";
+            saveJson += "\"txt4\":\"" + document.getElementById('txt4').value.replace("\"", "\\\"") + "\",";
+            saveJson += "\"txt5\":\"" + document.getElementById('txt5').value.replace("\"", "\\\"") + "\",";
+            saveJson += "\"txt6\":\"" + document.getElementById('txt6').value.replace("\"", "\\\"") + "\",";
+            saveJson += "\"txt7\":\"" + document.getElementById('txt7').innerText + "\"}";
+            window.location.href = "command:::save::" + saveJson;
+        }
+
+        //onload = function() {
+        //    setData({ txt1: '2013-10-11', txt2: '2', txt3: '3', txt4: '4', txt5: '5', txt6: '6' });
+        //}
+    </script>
+</head>
+<body>
+    <div style="width:650px; margin:0px auto;">
+    <div style="text-align:center;width:650px; line-height:60px; height:60px; font-size:24px;">
+        重要地段规划执法巡查登记明细册
+    </div>
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <td colspan="4">执法巡查范围：城市主要干道和广场两侧50米区域和其他区域需要跟踪巡查的重要建设工程</td>
+        </tr>
+        <tr>
+            <td colspan="4">执法巡查内容：建设工程批后管理、建筑位置、建筑标高、建筑立面、建筑层数、配套工程、绿地要求和违法建设。</td>
+        </tr>
+        <tr>
+            <td width="100px">巡查日期</td>
+            <td id="txt1"></td>
+            <td width="100px">巡查责任人</td>
+            <td><input id="txt2" maxlength="20" placeHolder="点击输入巡查责任人"/><span id="lbl2"></span></td>
+        </tr>
+        <tr>
+            <td>
+                巡查地段</td>
+            <td><input id="txt3" maxlength="30" placeHolder="点击输入巡查地段"/><span id="lbl3"></span></td>
+            <td>
+                负责人</td>
+            <td><input id="txt4" maxlength="30" placeHolder="点击输入负责人"/><span id="lbl4"></span></td>
+        </tr>
+        <tr>
+            <td height="120px">
+                巡查中日常管理及相关问题既要</td>
+            <td colspan="3" valign="top">
+                <textarea id="txt5" placeHolder="点击输入"></textarea><span id="lbl5"></span>
+            </td>
+        </tr>
+        <tr>
+            <td height="120px">
+                依法初步实施处理</td>
+            <td colspan="3" valign="top"><textarea id="txt6" placeHolder="点击输入"></textarea><span id="lbl6"></span></td>
+        </tr>
+        <tr>
+            <td height="80px">
+                监督栏</td>
+            <td colspan="3" align="right" valign="bottom" cellpadding="10">
+                签名：<span id="txt7" style="display:inline"></span></td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FormAndMaterialCellIdentifier" id="bnD-Wq-Jy5" customClass="FormAndMaterialCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bnD-Wq-Jy5" id="P6E-7T-nGN">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruW-tz-w8f">
+                        <rect key="frame" x="18" y="12" width="284" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="GOq-iL-Jd1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Adv-yI-U2m">
+                        <rect key="frame" x="0.0" y="43" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.74509803921568629" green="0.74509803921568629" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="iMf-5Y-WHE"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Adv-yI-U2m" firstAttribute="top" secondItem="ruW-tz-w8f" secondAttribute="bottom" constant="10" id="9ki-br-Yei"/>
+                    <constraint firstAttribute="trailing" secondItem="Adv-yI-U2m" secondAttribute="trailing" id="Tci-cb-LIX"/>
+                    <constraint firstItem="ruW-tz-w8f" firstAttribute="leading" secondItem="P6E-7T-nGN" secondAttribute="leading" constant="18" id="YzZ-Of-Kn6"/>
+                    <constraint firstAttribute="trailing" secondItem="ruW-tz-w8f" secondAttribute="trailing" constant="18" id="f1I-Uv-Nbb"/>
+                    <constraint firstItem="ruW-tz-w8f" firstAttribute="top" secondItem="P6E-7T-nGN" secondAttribute="top" constant="12" id="mba-nx-DkC"/>
+                    <constraint firstItem="Adv-yI-U2m" firstAttribute="leading" secondItem="P6E-7T-nGN" secondAttribute="leading" id="xDc-MD-8Za"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblName" destination="ruW-tz-w8f" id="qj4-TD-W6D"/>
+            </connections>
+            <point key="canvasLocation" x="20" y="125"/>
+        </tableViewCell>
+    </objects>
+</document>

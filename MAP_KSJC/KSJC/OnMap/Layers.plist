@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>专题数据</string>
+		<key>values</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>控规</string>
+				<key>url</key>
+				<string>KONGGUI</string>
+				<key>type</key>
+				<string>WMTS</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>地名</string>
+				<key>url</key>
+				<string>DM</string>
+				<key>type</key>
+				<string>WMTS</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>蓝线</string>
+				<key>url</key>
+				<string>XZLX</string>
+				<key>type</key>
+				<string>DynamicLayer</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>红线</string>
+				<key>url</key>
+				<string>YDHX</string>
+				<key>type</key>
+				<string>DynamicLayer</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>规划路网</string>
+				<key>url</key>
+				<string>GHDL</string>
+				<key>type</key>
+				<string>WMTS</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>行政边线</string>
+				<key>url</key>
+				<string>XZQHBX</string>
+				<key>type</key>
+				<string>WMTS</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

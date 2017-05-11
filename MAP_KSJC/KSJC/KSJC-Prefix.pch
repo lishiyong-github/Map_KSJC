@@ -1,0 +1,29 @@
+//
+//  KSJC-Prefix.pch
+//  KSJC
+//
+//  Created by 叶松丹 on 16/9/11.
+//  Copyright © 2016年 dist. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#define MainR [[UIScreen mainScreen] bounds]
+
+#define SCREEN_WIDTH   [[UIScreen mainScreen] bounds].size.width
+#define SCREEN_HEIGHT   [[UIScreen mainScreen] bounds].size.height
+
+#define GRAYCOLOR [UIColor colorWithRed:238/255.0 green:238/255.0 blue:238/255.0 alpha:1]
+#define GRAYCOLOR_LIGHT [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1]
+#define BLUECOLOR [UIColor colorWithRed:34.0/255.0 green:152.0/255.0 blue:239.0/255.0 alpha:1]
+#define GRAYCOLOR_DARK [UIColor colorWithRed:100/255.0 green:100/255.0 blue:100/255.0 alpha:1]
+#define defaults [NSUserDefaults standardUserDefaults]
+
+#endif

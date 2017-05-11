@@ -1,0 +1,123 @@
+﻿<html>
+<head>
+    <title>停工单</title>
+    <meta name="viewport" content="width=724, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no"/>
+    
+    <style type="text/css">
+        html,body{margin:0px; padding:10px;}
+        input{border:none; border-bottom:dashed 1px #999;border-radius:0px; font-size:16px;}
+        table tr{height:50px;}
+    </style>
+    
+    <script type="text/javascript">
+        var editable = true;
+        var data=null;
+        var day;
+        
+        function setEditable(e){
+            editable = e;
+            
+            var inputDisplay = editable?'':'none';
+            var spanDisplay = editable?'none':'';
+            
+            document.getElementById('inputDwgr').style.display=inputDisplay;
+            document.getElementById('inputAddress').style.display=inputDisplay;
+            document.getElementById('inputGc').style.display=inputDisplay;
+            document.getElementById('inputEvent').style.display=inputDisplay;
+            document.getElementById('inputQuxian').style.display=inputDisplay;
+            document.getElementById('inputDsr').style.display=inputDisplay;
+            document.getElementById('inputJbr').style.display=inputDisplay;
+            document.getElementById('inputDianhua').style.display=inputDisplay;
+            document.getElementById('inputDizhi').style.display=inputDisplay;
+            
+            document.getElementById('lblDwgr').style.display=spanDisplay;
+            document.getElementById('lblAddress').style.display=spanDisplay;
+            document.getElementById('lblGc').style.display=spanDisplay;
+            document.getElementById('lblEvent').style.display=spanDisplay;
+            document.getElementById('lblQuxian').style.display=spanDisplay;
+            document.getElementById('lblDsr').style.display=spanDisplay;
+            document.getElementById('lblJbr').style.display=spanDisplay;
+            document.getElementById('lblDianhua').style.display=spanDisplay;
+            document.getElementById('lblDizhi').style.display=spanDisplay;
+        }
+    
+        function setData(d){
+            setEditable(editable);
+            data = d;
+            document.getElementById('inputDwgr').value=d.dwgr;
+            document.getElementById('inputAddress').value=d.address;
+            document.getElementById('inputGc').value=d.gc;
+            document.getElementById('inputEvent').value=d.event;
+            document.getElementById('inputQuxian').value=d.quxian;
+            document.getElementById('inputDsr').value=d.dsr;
+            document.getElementById('inputJbr').value=d.jbr;
+            document.getElementById('inputDianhua').value=d.dianhua;
+            document.getElementById('inputDizhi').value=d.dizhi;
+        
+            document.getElementById('lblNumber').innerText=d.number;
+            document.getElementById('lblCode').innerText=d.code;
+            document.getElementById('lblDwgr').innerText=d.dwgr;
+            document.getElementById('lblAddress').innerText=d.address;
+            document.getElementById('lblGc').innerText=d.gc;
+            document.getElementById('lblEvent').innerText=d.event;
+            document.getElementById('lblQuxian').innerText=d.quxian;
+            document.getElementById('lblDsr').innerText=d.dsr;
+            document.getElementById('lblJbr').innerText=d.jbr;
+            document.getElementById('lblDianhua').innerText=d.dianhua;
+            document.getElementById('lblDizhi').innerText=d.dizhi;
+            document.getElementById('lblDay').innerText = d.day;
+        }
+    
+        function save(){
+            var saveJson = "{\"number\":\"";
+            saveJson +=document.getElementById('lblNumber').innerText.replace("\"","\\\"")+"\",";
+            saveJson +="\"code\":\""+document.getElementById('lblCode').innerText.replace("\"","\\\"")+"\",";
+            saveJson +="\"dwgr\":\""+document.getElementById('inputDwgr').value.replace("\"","\\\"")+"\",";
+            saveJson +="\"address\":\""+document.getElementById('inputAddress').value.replace("\"","\\\"")+"\",";
+            saveJson +="\"gc\":\""+document.getElementById('inputGc').value.replace("\"","\\\"")+"\",";
+            saveJson +="\"event\":\""+document.getElementById('inputEvent').value.replace("\"","\\\"")+"\",";
+            saveJson +="\"quxian\":\""+document.getElementById('inputQuxian').value.replace("\"","\\\"")+"\",";
+            saveJson +="\"dsr\":\""+document.getElementById('inputDsr').value.replace("\"","\\\"")+"\",";
+            saveJson +="\"jbr\":\""+document.getElementById('inputJbr').value.replace("\"","\\\"")+"\",";
+            saveJson +="\"dianhua\":\""+document.getElementById('inputDianhua').value.replace("\"","\\\"")+"\",";
+            saveJson +="\"dizhi\":\""+document.getElementById('inputDizhi').value.replace("\"","\\\"")+"\",";
+            saveJson +="\"day\":\""+document.getElementById('lblDay').innerText.replace("\"","\\\"")+"\"}";
+            window.location.href="command:::save::"+saveJson;
+        }
+   
+    </script>
+    
+</head>
+<body>
+    
+    <div>
+        <div style="text-align:right; height:50px; line-height:50px; padding-right:20px;">
+            <span id="lblNumber"></span>
+        </div>
+        <h1 style="text-align:center">
+            停工通知单 
+        </h1>
+        <div style="background-color:#999999;height:3px;"></div>
+        <div style="text-align:center; margin-top:20px;height:50px">
+            <span id="lblCode"></span>
+        </div>
+        
+        <p>
+        <input type="text" id="inputDwgr" disabled="disabled" style="width:300px; border:none" placeHolder="单位名称/个人"/><span id="lblDwgr"></span>：<br />
+        </p>
+        
+        <p style="line-height:40px; text-indent:2em;">
+        
+        我局对你公司建设的位于<input type="text" id="inputAddress" disabled="disabled" style="width:200px;border:none" placeHolder="地址"/><span id="lblAddress"></span>的<input type="text" disabled="disabled" id="inputGc" style="width:250px;border:none" placeHolder="工程名称描述"/><span id="lblGc"></span>进行执法检查，发现存在<input type="text" id="inputEvent" style="width:580px" placeHolder="事件描述"/><span id="lblEvent"></span>的现象。<br />    根据《中华人民共和国城乡规划法》第六十四条
+        规定，现责令你公司立即停止建设，携带有关证照和图纸资料到我局接受调查处理。
+        依据《中华人民共和国城乡规划法》第64条，《湖南省实施<中华人民共和国城乡规划法>办法》第51条，现责令
+        <br />    特此通知。
+        </p>
+        <div style="text-align:right; line-height:40px;">
+        昆山市规划局<br />
+        <span style="display:inline" id="lblDay"></span>
+        </div>
+    </div>
+</body>
+</html>

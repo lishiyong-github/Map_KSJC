@@ -1,0 +1,265 @@
+﻿<html>
+<head>
+    <title>无标题页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <style type="text/css">
+        body{ font-family:"微软雅黑"; font-size:14px;}
+    .violationCase{color:#67D8C6; font-weight:bold; font-size:20px; margin-top:10px}
+    .allType{height:30px; line-height:30px; float:left;background-color:#67D8C6; width:100px; margin-right:20px; font-weight:bold;color:#FFFFFF; text-align:center}
+    .singleTypeHead{height:30px; line-height:30px;float:left;background-color:#D7D2BC; width:150px;margin-right:20px; font-weight:bold; text-align:center}
+    .singleTypeHead2{background-color:#67D8C6; height:40px; line-height:40px; width:185px; color:#FFFFFF; font-weight:bold; text-align:center; margin-bottom:3px}
+    .singleTypeLine{background-color:#D7D2BC; height:60px; line-height:60px; width:185px; color:#FFFFFF; font-weight:bold; text-align:center;margin-bottom:3px}
+    .singleTypeLine2{background-color:#339183; height:60px; line-height:60px; width:185px; color:#FFFFFF; font-weight:bold; text-align:center;margin-bottom:3px}
+    .singleTypeLine3{background-color:#8E8A71; height:60px; line-height:60px; width:185px; color:#FFFFFF; font-weight:bold; text-align:center;margin-bottom:3px}
+    
+    .propertybox{position:absolute; right:-310px; top:0px;  background:url(bg.gif); z-index:2; height:100%; width:300px;box-shadow:-2px 0 3px #ccc; border-left:solid 1px #ccc;-webkit-transition-duration: .5s;-webkit-transition-property: right;-webkit-transition-timing-function: ease;}
+    .form-detail-box .draglist LI{display:block;  height:60px;font-size:16px; line-height:60px; margin:0px; text-indent:10px; border-bottom:dashed 1px #ccc;}
+     /*表单*/
+        .form-selector-box{height:30px; border-bottom:solid 1px #999999; line-height:30px;}
+        .form-selector-box select{-webkit-appearance: none; height:30px; border:none; font-size:12px;padding-left:20px;padding-right:20px;background-image:url(dropdown.png);background-repeat:no-repeat; background-position:center right;}
+        .form-detail-box{overflow:hidden; position:relative;}
+        .form-item{min-height:30px; line-height:30px; margin:5px 0px; clear:both;}
+        .form-textarea-row{height:120px;}
+        .form-item-name{float:left; min-height:25px; line-height:25px; margin:0px 10px; background-color:#67d8c6;text-align:center; min-width:140px; font-size:13px; color:White;border-radius: 5px;}
+        .form-none{background:none !important}
+        .form-item-input{float:left;}
+        .form-item-input .disabled{background-color:#cccccc;}
+        .form-item-input input{height:18px; width:150px; border:solid 1px #999999; float:left;}
+        .form-item-input textarea{height:105px; border:solid 1px #999999;}
+        .form-item-input .button{min-width:60px; float:left; height:25px; margin-left:20px; line-height:25px; text-align:center; background-color:green; color:White;}
+        .form-toolbar{height:60px; background-color:#74d3eb;}
+        .form-toolbar DIV{float:right; width:75px; height:60px; background-position:center; background-repeat:no-repeat;}
+        .form-toolbar-send{background-image:url(send.png)}
+        .form-toolbar-sendback{background-image:url(sendback.png)}
+        .form-toolbar-save{background-image:url(save.png)}
+        .form-toolbar-goback{background-image:url(close2.png)}
+        .waiting{margin:20% auto auto auto; font-size:13px; color:#5eb2cb; width:100px; height:80px; text-align:center;}
+        .form-selector-box select{}
+    </style>
+    
+    <link href="dist.ipad.css?asdfe" rel="stylesheet" type="text/css" />
+    <script src="jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="dist.ipad.core.js" type="text/javascript"></script>
+    <!--<script src="pages/desktop.js?a" type="text/javascript"></script>-->
+    <script src="dist.ipad.touchlink.js" type="text/javascript"></script>
+    <script src="dist.ipad.dragList.js" type="text/javascript"></script>
+    <script src="dist.ipad.tabBar.js" type="text/javascript"></script>
+    <script src="dist.ipad.iScroll.js" type="text/javascript"></script>
+    <script src="dist.ipad.scroller.js" type="text/javascript"></script>
+    <script src="dist.ipad.form.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+        //var dist = window.dist = {};
+        dist.desktop = {};
+        dist.userid = 52;
+        window.serviceUrl = '';
+        window.userid=0;
+        $(document).ready(function() {
+                         
+            //阻止浏览器默认操作
+            if (document.body.addEventListener) {
+                document.body.addEventListener("touchstart", function(e) {
+                    var tn = e.target.tagName
+                    if (tn == "SELECT" || tn == "INPUT" || tn == "A" || e.target.parentNode.tagName == "A" || tn == "TEXTAREA")
+                        return;
+                    e.preventDefault();
+                    var ele = e.target;
+                    var hideProperty = true;
+                    while (ele) {
+                        if (ele.className == 'propertybox') {
+                            hideProperty = false;
+                            break;
+                        }
+                        ele = ele.parentNode;
+                    }
+                 
+                    if (hideProperty) {
+                        $('#main-form').css({ right: -450 });
+//                        clearTimeout(clearAllProperyTimeout);
+//                        clearAllProperyTimeout = setTimeout(function() {
+//                            meetingProperty.hide();
+//                            mainForm.hide();
+//                            mainPs.hide();
+//                        }, 1000);
+                    }
+                    return false;
+                });
+            }
+            window.location = 'command:::documentReady';
+        });
+        
+        dist.desktop = {
+            form: null,
+            $form: null,
+            listControls:[],
+            countLabels:[],
+            create: function() {
+                new iScroll('list-scroller1');
+                new iScroll('list-scroller2');
+                new iScroll('list-scroller3');
+                new iScroll('list-scroller4');
+                new iScroll('list-scroller5');
+                this.listControls[0] = $('#list-scroller1').dragList({itemClick: function(sender) {dist.desktop.showDetail(sender);}});
+                this.listControls[1] = $('#list-scroller2').dragList({itemClick: function(sender) {dist.desktop.showDetail(sender);}});
+                this.listControls[2] = $('#list-scroller3').dragList({itemClick: function(sender) {dist.desktop.showDetail(sender);}});
+                this.listControls[3] = $('#list-scroller4').dragList({itemClick: function(sender) {dist.desktop.showDetail(sender);}});
+                this.listControls[4] = $('#list-scroller5').dragList({itemClick: function(sender) {dist.desktop.showDetail(sender);}});
+                
+                this.countLabels = [$('#count-1'),$('#count-2'),$('#count-3'),$('#count-4'),$('#count-5')];
+                selToDoProject();
+                this.form = new dist.form('main-form', { sendCompleted: function() { dist.desktop.sendCompleted(); } });
+                this.$form = $('#main-form');
+            },
+            showDetail: function( sender) {
+                var valId = sender[0].getAttribute('identity');
+                this.pId = valId;
+                var data = sender[0].data;
+                this.$form.show().css({ right: 0 });
+                this.form.load(valId);
+            },
+            sendCompleted: function() {
+                alert("send");
+            }
+        }
+
+        function selToDoProject() {
+            $.ajax({
+                url: serviceUrl,
+                dataType: 'json',
+                   data: { type: "smartplan", action: 'todolist', user:userid },
+                success: function(data) {
+                   readData(data);
+                    //$("#count_1")[0].innerText = Projectdata[0].datacount;
+                    //binddiv($("#list-scroller1"), Projectdata);
+                },
+                error: function() {
+                   
+                }
+            })
+        }
+    
+        var source1=[],source2=[],source3=[],source4=[],source5=[];
+    
+        function readData(data){
+            
+            var list = data[0].jsondata;
+            
+            for(var i=0;i<list.length;i++){
+                var d=list[i];
+                if(d.BusinessName=='建设工程规划许可放验线审批'){
+                    source2.push(d);
+                }else if(d.BusinessName=='批后跟踪'){
+                    source3.push(d);
+                }else if(d.BusinessName=='建设工程竣工验收'){
+                    source4.push(d);
+                }else if(d.BusinessName=='违法查处'){
+                    source5.push(d);
+                }else{
+                    source1.push(d);
+                }
+            }
+            fillTolist(dist.desktop.listControls[0],dist.desktop.countLabels[0],source1);
+            fillTolist(dist.desktop.listControls[1],dist.desktop.countLabels[1],source2);
+            fillTolist(dist.desktop.listControls[2],dist.desktop.countLabels[2],source3);
+            fillTolist(dist.desktop.listControls[3],dist.desktop.countLabels[3],source4);
+            fillTolist(dist.desktop.listControls[4],dist.desktop.countLabels[4],source5);
+        }
+    
+        function fillTolist(listControl,countLabel, data) {
+            listControl[0].innerHTML='';
+            countLabel[0].innerText=data.length;
+            var df = document.createDocumentFragment();
+            for (var i = 0; i < data.length; i++) {
+                df.appendChild(createMainListItem(data[i], 'ProjectName', 'ProjectId'));
+            }
+            listControl[0].appendChild(df);
+        }
+
+        function createMainListItem(data, textField, valueField) {
+            var li = document.createElement('LI');
+            var t=data[textField];
+            if(t.length>10)
+             t=t.substring(0,10)+'...';
+            li.innerText = t;
+            li.data = data;
+            li.setAttribute('identity', data[valueField]);
+            li.className = 'singleTypeLine';
+            return li;
+        }
+    
+        function initDesktop(url,uid){
+            serviceUrl = url;
+            window.userid = uid;
+            dist.desktop.create();
+        }
+    </script>
+</head>
+<body >
+<div style="height:100px; margin-left:20px; margin-right:20px; margin-top:15px; width:1024px">
+<div style="float:left; width:65%; height:100%">
+    <div  class="violationCase">您本周已经处理了3起违法案件</div>
+    <div style=" margin-top:30px;display:none">
+         <div  class="allType">全部</div>
+         <div class="singleTypeHead">行政许可项目审批</div> 
+         <div class="singleTypeHead">违法案件</div>
+         <div class="singleTypeHead">......</div>
+    </div>
+</div>
+<div style="float:left; width:30%; height:100%; background-color:#E2E3D5">
+    <div style=" float:left; width:40%; margin-top:18px; margin-left:30px;"><img src="phone.png"/></div>
+    <div style=" float:left">
+        <div style=" color＃999999;font-weight:bold; margin-top:20px; font-size:18px">还未开始开始巡查</div>
+        <div style=" color:#AFB2AD; font-weight:bold;display:none">2013-8-20 08:34:56</div>
+        <div style=" color:#AFB2AD;font-weight:bold;">天云大队</div>
+    </div>
+</div>
+</div>
+<div style="height:2px; background-color:#D7D2BC; margin-top:15px;"></div>
+<div  style="margin-left:20px; margin-right:20px; width:1024px">
+    <div style="float:left; margin-top:10px; margin-right:5px">
+        <div class="singleTypeHead2">行政许可项目审批<span id="count-1" style=" float:right; padding-right:10px; font-weight:bold; font-size:28px"></span></div>
+        <div style="height:500px; overflow-y:scroll; position:relative">
+            <ul id="list-scroller1" style="margin:0px; padding:0px">
+                
+            </ul>
+        </div>
+    </div>
+    <div style="float:left; margin-top:10px;margin-right:5px">
+        <div class="singleTypeHead2">放验线审批<span id="count-2" style=" float:right; padding-right:10px; font-weight:bold; font-size:28px"></span></div>
+        <div style="height:500px; overflow-y:scroll; position:relative">
+            <ul id="list-scroller2" style="margin:0px; padding:0px">
+                
+            </ul>
+        </div>
+    </div>
+    <div style="float:left; margin-top:10px;margin-right:5px">
+        <div class="singleTypeHead2">批后跟踪<span id="count-3" style=" float:right; padding-right:10px; font-weight:bold; font-size:28px"></span></div>
+        <div style="height:500px; overflow-y:scroll; position:relative">
+            <ul id="list-scroller3" style="margin:0px; padding:0px">
+                
+            </ul>
+        </div>
+    </div>
+    <div style="float:left; margin-top:10px;margin-right:5px">
+        <div class="singleTypeHead2">竣工验收<span id="count-4" style=" float:right; padding-right:10px; font-weight:bold; font-size:28px"></span></div>
+        <div style="height:500px; overflow-y:scroll; position:relative">
+            <ul id="list-scroller4" style="margin:0px; padding:0px">
+                
+            </ul>
+        </div>
+    </div>
+    <div style="float:left; margin-top:10px;margin-right:5px">
+        <div class="singleTypeHead2">违法查处<span id="count-5" style=" float:right; padding-right:10px; font-weight:bold; font-size:28px"></span></div>
+        <div style="height:500px; overflow-y:scroll; position:relative">
+            <ul id="list-scroller5" style="margin:0px; padding:0px">
+                
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="main-form" class="propertybox" style="right: -410px; width: 450px; height:700px; display: none;">
+</div>
+</body>
+</html>

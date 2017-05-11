@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="phLogCell">
+            <rect key="frame" x="0.0" y="0.0" width="495" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="495" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOO-tg-nqh">
+                        <rect key="frame" x="10" y="12" width="475" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="rd3-iw-Qbk"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2S-c3-EvP">
+                        <rect key="frame" x="10" y="50" width="277" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.50196078431372548" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKE-Rt-van">
+                        <rect key="frame" x="297" y="49" width="188" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="188" id="RoU-Ge-FWZ"/>
+                            <constraint firstAttribute="height" constant="21" id="sfX-bT-XMd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.33725490196078434" green="0.59215686274509804" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pbx-50-dQt">
+                        <rect key="frame" x="0.0" y="78" width="495" height="1"/>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="n5h-QO-hAp"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="aOO-tg-nqh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="4zX-Ct-WRr"/>
+                    <constraint firstItem="pbx-50-dQt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5hF-KS-YI7"/>
+                    <constraint firstItem="p2S-c3-EvP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="GJT-0O-n8j"/>
+                    <constraint firstItem="aOO-tg-nqh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="HMt-UP-ySs"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="KKE-Rt-van" secondAttribute="trailing" constant="2" id="IpW-e9-Ed4"/>
+                    <constraint firstItem="pbx-50-dQt" firstAttribute="top" secondItem="p2S-c3-EvP" secondAttribute="bottom" constant="7" id="OLS-GX-rh8"/>
+                    <constraint firstAttribute="bottom" secondItem="pbx-50-dQt" secondAttribute="bottom" constant="0.5" id="SE3-wY-Qwb"/>
+                    <constraint firstItem="pbx-50-dQt" firstAttribute="top" secondItem="KKE-Rt-van" secondAttribute="bottom" constant="8" id="Yrv-De-PB1"/>
+                    <constraint firstAttribute="trailing" secondItem="pbx-50-dQt" secondAttribute="trailing" id="d4w-Ka-3Hc"/>
+                    <constraint firstAttribute="trailing" secondItem="aOO-tg-nqh" secondAttribute="trailing" constant="10" id="ymn-Zo-1eW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="location" destination="p2S-c3-EvP" id="SrX-7L-Do8"/>
+                <outlet property="projectName" destination="aOO-tg-nqh" id="gzG-M3-qjf"/>
+                <outlet property="time" destination="KKE-Rt-van" id="jjV-zR-bUa"/>
+            </connections>
+            <point key="canvasLocation" x="226.5" y="215"/>
+        </tableViewCell>
+    </objects>
+</document>
