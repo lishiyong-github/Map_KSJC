@@ -15,10 +15,16 @@
 #import "DailyJobReaderViewController.h"
 #import "MapViewController+ThemeTree.h"
 
-
-@interface MapViewController ()
-
+/******************* 高德地图 *******************/
+#import <MAMapKit/MAMapKit.h>
+@interface MapViewController ()<MAMapViewDelegate>
+@property (nonatomic,strong) MAMapView *gdMapView;
+@property (nonatomic, strong) UIButton *locationBtn;
+@property (nonatomic, strong) UIImage *imageLocated;
+@property (nonatomic, strong) UIImage *imageNotLocate;
 @end
+
+/******************* 高德地图 *******************/
 
 @implementation MapViewController
 @synthesize mapView;
@@ -159,6 +165,7 @@ AGSEnvelope *defaultEnvelope;
     [self.mapContainer addSubview:_searchResultPanel];
     //请求数据
     [self c_initDataQueryList];
+    [self initGDMapView];
 }
 
 -(void)createMapBySubThread{
@@ -611,6 +618,66 @@ AGSEnvelope *defaultEnvelope;
             break;
         default:
             break;
+    }
+}
+
+/******************* 高德地图 *******************/
+/******************* 高德地图 *******************/
+- (void)initGDMapView
+{
+    self.gdMapView = [[MAMapView alloc] initWithFrame:self.mapView.frame];
+    self.gdMapView.zoomLevel = 16.0;
+    self.gdMapView.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+    
+    self.gdMapView.showsIndoorMap = NO;
+    self.gdMapView.delegate = self;
+    [self.mapView addSubview:self.gdMapView];
+    self.gdMapView.userTrackingMode = MAUserTrackingModeFollow;
+    
+    [self addLocationButton];
+    
+    //    self.traceManager = [[MATraceManager alloc] init];
+}
+
+- (void)addLocationButton
+{
+    self.imageLocated = [UIImage imageNamed:@"location_yes.png"];
+    self.imageNotLocate = [UIImage imageNamed:@"location_no.png"];
+    
+    //mapView frame (0 0; 764 720
+//    CGRect frame = CGRectMake(934, CGRectGetHeight(self.mapView.frame) - 90, 40, 40);
+    CGRect frame = CGRectMake(1024 - 80, 768-44-80, 40, 40);
+    self.locationBtn = [[UIButton alloc] initWithFrame:frame];
+    self.locationBtn.backgroundColor = [UIColor whiteColor];
+    self.locationBtn.layer.cornerRadius = 3;
+    [self.locationBtn addTarget:self action:@selector(actionLocation) forControlEvents:UIControlEventTouchUpInside];
+    [self.locationBtn setImage:self.imageNotLocate forState:UIControlStateNormal];
+    self.btnSwitchMap.hidden = YES;
+    
+    [self.view addSubview:self.locationBtn];
+}
+
+- (void)actionLocation
+{
+    if (self.gdMapView.userTrackingMode == MAUserTrackingModeFollow)
+    {
+        [self.gdMapView setUserTrackingMode:MAUserTrackingModeNone];
+    }
+    else
+    {
+        [self.gdMapView setUserTrackingMode:MAUserTrackingModeFollow];
+    }
+}
+#pragma mark -- 高德地图
+- (void)mapView:(MAMapView *)mapView  didChangeUserTrackingMode:(MAUserTrackingMode)mode animated:(BOOL)animated
+{
+    if (mode == MAUserTrackingModeNone)
+    {
+        [self.locationBtn setImage:self.imageNotLocate forState:UIControlStateNormal];
+    }
+    else
+    {
+        [self.locationBtn setImage:self.imageLocated forState:UIControlStateNormal];
     }
 }
 

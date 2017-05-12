@@ -31,6 +31,7 @@ highlightedContentImage:(UIImage *)hcimg;
         _contentImageView = [[UIImageView alloc] initWithImage:cimg];
         _contentImageView.highlightedImage = hcimg;
         [self addSubview:_contentImageView];
+        [self setHidden:YES];
     }
     return self;
 }
