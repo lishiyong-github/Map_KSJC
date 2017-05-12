@@ -10,6 +10,20 @@
 		334FD2EF1DAE34CB00996FD6 /* InfomationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 334FD2EE1DAE34CB00996FD6 /* InfomationView.m */; };
 		334FD2F11DAE350900996FD6 /* InfomationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 334FD2F01DAE350900996FD6 /* InfomationView.xib */; };
 		62B2FE6431B8C5EC8F3C3233 /* libPods-KSJC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 507C6620744F117720307933 /* libPods-KSJC.a */; };
+		9C1D7A231EC5456E00C9BDFA /* GDMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D7A221EC5456E00C9BDFA /* GDMapView.m */; };
+		9C1D7A401EC5546C00C9BDFA /* AMapRouteRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D7A261EC5546C00C9BDFA /* AMapRouteRecord.m */; };
+		9C1D7A411EC5546C00C9BDFA /* FileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D7A281EC5546C00C9BDFA /* FileHelper.m */; };
+		9C1D7A421EC5546C00C9BDFA /* MATracePoint+Coding.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D7A2A1EC5546C00C9BDFA /* MATracePoint+Coding.m */; };
+		9C1D7A431EC5546C00C9BDFA /* SystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D7A2C1EC5546C00C9BDFA /* SystemInfo.m */; };
+		9C1D7A441EC5546C00C9BDFA /* CACoordLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D7A2F1EC5546C00C9BDFA /* CACoordLayer.m */; };
+		9C1D7A451EC5546C00C9BDFA /* MAMutablePolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D7A311EC5546C00C9BDFA /* MAMutablePolyline.m */; };
+		9C1D7A461EC5546C00C9BDFA /* MAMutablePolylineRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D7A331EC5546C00C9BDFA /* MAMutablePolylineRenderer.m */; };
+		9C1D7A471EC5546C00C9BDFA /* MovingAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D7A351EC5546C00C9BDFA /* MovingAnnotationView.m */; };
+		9C1D7A481EC5546C00C9BDFA /* StatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D7A371EC5546C00C9BDFA /* StatusView.m */; };
+		9C1D7A491EC5546C00C9BDFA /* SystemInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D7A391EC5546C00C9BDFA /* SystemInfoView.m */; };
+		9C1D7A4A1EC5546C00C9BDFA /* TipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D7A3B1EC5546C00C9BDFA /* TipView.m */; };
+		9C1D7A4B1EC5546C00C9BDFA /* TracingPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D7A3D1EC5546C00C9BDFA /* TracingPoint.m */; };
+		9C1D7A4C1EC5546C00C9BDFA /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D7A3F1EC5546C00C9BDFA /* Util.m */; };
 		9CA741DB1EC4566200D87F80 /* LSYShowMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA741D41EC4566200D87F80 /* LSYShowMsg.m */; };
 		9CA741DC1EC4566200D87F80 /* SKBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA741D61EC4566200D87F80 /* SKBounceAnimation.m */; };
 		9CA741DD1EC4566200D87F80 /* XAspext-ShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA741D71EC4566200D87F80 /* XAspext-ShowController.m */; };
@@ -682,6 +696,34 @@
 		507C6620744F117720307933 /* libPods-KSJC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KSJC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55FC424ADFE94C63D9A188ED /* Pods-KSJC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSJC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KSJC/Pods-KSJC.debug.xcconfig"; sourceTree = "<group>"; };
 		926787D810BDD2A784DAF132 /* Pods-KSJC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSJC.release.xcconfig"; path = "Pods/Target Support Files/Pods-KSJC/Pods-KSJC.release.xcconfig"; sourceTree = "<group>"; };
+		9C1D7A211EC5456E00C9BDFA /* GDMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDMapView.h; sourceTree = "<group>"; };
+		9C1D7A221EC5456E00C9BDFA /* GDMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDMapView.m; sourceTree = "<group>"; };
+		9C1D7A251EC5546C00C9BDFA /* AMapRouteRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMapRouteRecord.h; sourceTree = "<group>"; };
+		9C1D7A261EC5546C00C9BDFA /* AMapRouteRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMapRouteRecord.m; sourceTree = "<group>"; };
+		9C1D7A271EC5546C00C9BDFA /* FileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHelper.h; sourceTree = "<group>"; };
+		9C1D7A281EC5546C00C9BDFA /* FileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileHelper.m; sourceTree = "<group>"; };
+		9C1D7A291EC5546C00C9BDFA /* MATracePoint+Coding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MATracePoint+Coding.h"; sourceTree = "<group>"; };
+		9C1D7A2A1EC5546C00C9BDFA /* MATracePoint+Coding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MATracePoint+Coding.m"; sourceTree = "<group>"; };
+		9C1D7A2B1EC5546C00C9BDFA /* SystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemInfo.h; sourceTree = "<group>"; };
+		9C1D7A2C1EC5546C00C9BDFA /* SystemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemInfo.m; sourceTree = "<group>"; };
+		9C1D7A2E1EC5546C00C9BDFA /* CACoordLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CACoordLayer.h; sourceTree = "<group>"; };
+		9C1D7A2F1EC5546C00C9BDFA /* CACoordLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CACoordLayer.m; sourceTree = "<group>"; };
+		9C1D7A301EC5546C00C9BDFA /* MAMutablePolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAMutablePolyline.h; sourceTree = "<group>"; };
+		9C1D7A311EC5546C00C9BDFA /* MAMutablePolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAMutablePolyline.m; sourceTree = "<group>"; };
+		9C1D7A321EC5546C00C9BDFA /* MAMutablePolylineRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAMutablePolylineRenderer.h; sourceTree = "<group>"; };
+		9C1D7A331EC5546C00C9BDFA /* MAMutablePolylineRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAMutablePolylineRenderer.m; sourceTree = "<group>"; };
+		9C1D7A341EC5546C00C9BDFA /* MovingAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingAnnotationView.h; sourceTree = "<group>"; };
+		9C1D7A351EC5546C00C9BDFA /* MovingAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingAnnotationView.m; sourceTree = "<group>"; };
+		9C1D7A361EC5546C00C9BDFA /* StatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusView.h; sourceTree = "<group>"; };
+		9C1D7A371EC5546C00C9BDFA /* StatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusView.m; sourceTree = "<group>"; };
+		9C1D7A381EC5546C00C9BDFA /* SystemInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemInfoView.h; sourceTree = "<group>"; };
+		9C1D7A391EC5546C00C9BDFA /* SystemInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemInfoView.m; sourceTree = "<group>"; };
+		9C1D7A3A1EC5546C00C9BDFA /* TipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipView.h; sourceTree = "<group>"; };
+		9C1D7A3B1EC5546C00C9BDFA /* TipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipView.m; sourceTree = "<group>"; };
+		9C1D7A3C1EC5546C00C9BDFA /* TracingPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TracingPoint.h; sourceTree = "<group>"; };
+		9C1D7A3D1EC5546C00C9BDFA /* TracingPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TracingPoint.m; sourceTree = "<group>"; };
+		9C1D7A3E1EC5546C00C9BDFA /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		9C1D7A3F1EC5546C00C9BDFA /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		9CA741D31EC4566200D87F80 /* LSYShowMsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSYShowMsg.h; sourceTree = "<group>"; };
 		9CA741D41EC4566200D87F80 /* LSYShowMsg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSYShowMsg.m; sourceTree = "<group>"; };
 		9CA741D51EC4566200D87F80 /* SKBounceAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKBounceAnimation.h; sourceTree = "<group>"; };
@@ -1638,6 +1680,57 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		9C1D7A201EC5454F00C9BDFA /* GDMapView */ = {
+			isa = PBXGroup;
+			children = (
+				9C1D7A211EC5456E00C9BDFA /* GDMapView.h */,
+				9C1D7A221EC5456E00C9BDFA /* GDMapView.m */,
+				9C1D7A241EC5546C00C9BDFA /* Model */,
+				9C1D7A2D1EC5546C00C9BDFA /* View */,
+			);
+			path = GDMapView;
+			sourceTree = "<group>";
+		};
+		9C1D7A241EC5546C00C9BDFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C1D7A251EC5546C00C9BDFA /* AMapRouteRecord.h */,
+				9C1D7A261EC5546C00C9BDFA /* AMapRouteRecord.m */,
+				9C1D7A271EC5546C00C9BDFA /* FileHelper.h */,
+				9C1D7A281EC5546C00C9BDFA /* FileHelper.m */,
+				9C1D7A291EC5546C00C9BDFA /* MATracePoint+Coding.h */,
+				9C1D7A2A1EC5546C00C9BDFA /* MATracePoint+Coding.m */,
+				9C1D7A2B1EC5546C00C9BDFA /* SystemInfo.h */,
+				9C1D7A2C1EC5546C00C9BDFA /* SystemInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C1D7A2D1EC5546C00C9BDFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C1D7A2E1EC5546C00C9BDFA /* CACoordLayer.h */,
+				9C1D7A2F1EC5546C00C9BDFA /* CACoordLayer.m */,
+				9C1D7A301EC5546C00C9BDFA /* MAMutablePolyline.h */,
+				9C1D7A311EC5546C00C9BDFA /* MAMutablePolyline.m */,
+				9C1D7A321EC5546C00C9BDFA /* MAMutablePolylineRenderer.h */,
+				9C1D7A331EC5546C00C9BDFA /* MAMutablePolylineRenderer.m */,
+				9C1D7A341EC5546C00C9BDFA /* MovingAnnotationView.h */,
+				9C1D7A351EC5546C00C9BDFA /* MovingAnnotationView.m */,
+				9C1D7A361EC5546C00C9BDFA /* StatusView.h */,
+				9C1D7A371EC5546C00C9BDFA /* StatusView.m */,
+				9C1D7A381EC5546C00C9BDFA /* SystemInfoView.h */,
+				9C1D7A391EC5546C00C9BDFA /* SystemInfoView.m */,
+				9C1D7A3A1EC5546C00C9BDFA /* TipView.h */,
+				9C1D7A3B1EC5546C00C9BDFA /* TipView.m */,
+				9C1D7A3C1EC5546C00C9BDFA /* TracingPoint.h */,
+				9C1D7A3D1EC5546C00C9BDFA /* TracingPoint.m */,
+				9C1D7A3E1EC5546C00C9BDFA /* Util.h */,
+				9C1D7A3F1EC5546C00C9BDFA /* Util.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9CA741D21EC4566200D87F80 /* LSYShowController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1723,6 +1816,7 @@
 		C662E8171D8E21E000F66DDB /* KSJC */ = {
 			isa = PBXGroup;
 			children = (
+				9C1D7A201EC5454F00C9BDFA /* GDMapView */,
 				C1D6A77D1E037CC50070C9FE /* 昆山站.gpx */,
 				119242161DD2C3D8009018D1 /* Config */,
 				C662ED171D8E23A500F66DDB /* Utity */,
@@ -3649,11 +3743,13 @@
 				C6945CB51DC9C26200A69CB3 /* ResourcesFileView.m in Sources */,
 				C68234DE1DFFBB6A000116D5 /* MJRefreshGifHeader.m in Sources */,
 				C68234DD1DFFBB6A000116D5 /* MJRefreshBackStateFooter.m in Sources */,
+				9C1D7A411EC5546C00C9BDFA /* FileHelper.m in Sources */,
 				C662EA4F1D8E233E00F66DDB /* DailyJobReplenish.m in Sources */,
 				C6D3B81A1DCB3C5600D174BF /* AFURLRequestSerialization.m in Sources */,
 				C662E8BA1D8E230F00F66DDB /* SysTabBarViewController.m in Sources */,
 				C662EC981D8E236E00F66DDB /* LineChartViewController.m in Sources */,
 				C68234D91DFFBB6A000116D5 /* MJRefreshAutoNormalFooter.m in Sources */,
+				9C1D7A491EC5546C00C9BDFA /* SystemInfoView.m in Sources */,
 				C662ECBE1D8E237F00F66DDB /* ResourceViewController.m in Sources */,
 				C662EA881D8E235600F66DDB /* JobInfo.m in Sources */,
 				C6D255161DE2A1BA00EF9419 /* DayLogsVC.m in Sources */,
@@ -3679,6 +3775,7 @@
 				C662EA8F1D8E235600F66DDB /* UserInfo.m in Sources */,
 				C6D2551A1DE2A33500EF9419 /* LogDetailCell.m in Sources */,
 				C6945CAA1DC9C26200A69CB3 /* EGORefreshTableHeaderView.m in Sources */,
+				9C1D7A471EC5546C00C9BDFA /* MovingAnnotationView.m in Sources */,
 				C6D3B8151DCB3C5600D174BF /* AFHTTPRequestOperationManager.m in Sources */,
 				C12C047A1E1F258A008EF449 /* OMServiceLayer.m in Sources */,
 				C662EA671D8E233E00F66DDB /* JobPhotoView.m in Sources */,
@@ -3696,6 +3793,7 @@
 				C6F1859F1DF0029300A0C0E7 /* BaseMessageCell.m in Sources */,
 				C662EA481D8E233E00F66DDB /* DailyJobAnsyControllerViewController.m in Sources */,
 				C6D3B81B1DCB3C5600D174BF /* AFURLResponseSerialization.m in Sources */,
+				9C1D7A421EC5546C00C9BDFA /* MATracePoint+Coding.m in Sources */,
 				C662E8F31D8E232500F66DDB /* FGalleryPhotoView.m in Sources */,
 				C662E8F41D8E232500F66DDB /* FileDownload.m in Sources */,
 				C662E8451D8E22FE00F66DDB /* ASIDataCompressor.m in Sources */,
@@ -3707,12 +3805,15 @@
 				C6945CC01DC9C26200A69CB3 /* MapSearchResultPanel.m in Sources */,
 				C662E8A41D8E230F00F66DDB /* DistDateSelector.m in Sources */,
 				C68234DA1DFFBB6A000116D5 /* MJRefreshAutoStateFooter.m in Sources */,
+				9C1D7A4B1EC5546C00C9BDFA /* TracingPoint.m in Sources */,
+				9C1D7A231EC5456E00C9BDFA /* GDMapView.m in Sources */,
 				C68234DF1DFFBB6A000116D5 /* MJRefreshNormalHeader.m in Sources */,
 				C684FFD51DD1B9B7002CE672 /* Logcell.m in Sources */,
 				C662EA651D8E233E00F66DDB /* JobDetailView.m in Sources */,
 				C662E8201D8E21E000F66DDB /* ViewController.m in Sources */,
 				C662EA591D8E233E00F66DDB /* PDATableViewCell.m in Sources */,
 				C68234D31DFFBB6A000116D5 /* MJRefreshAutoFooter.m in Sources */,
+				9C1D7A481EC5546C00C9BDFA /* StatusView.m in Sources */,
 				C662EC6D1D8E236600F66DDB /* DeviceValidator.m in Sources */,
 				C6945CA91DC9C26200A69CB3 /* EGORefreshTableFooterView.m in Sources */,
 				C662E8F91D8E232500F66DDB /* FileItemThumbnailView.m in Sources */,
@@ -3723,6 +3824,7 @@
 				C6945CB81DC9C26200A69CB3 /* GPS.m in Sources */,
 				9CA741DB1EC4566200D87F80 /* LSYShowMsg.m in Sources */,
 				C662E8B11D8E230F00F66DDB /* PNBarChart.m in Sources */,
+				9C1D7A451EC5546C00C9BDFA /* MAMutablePolyline.m in Sources */,
 				C662ECB81D8E237F00F66DDB /* DesktopViewController.m in Sources */,
 				C17EE5BC1E1CE00E003CDABF /* TreeNodeCell.m in Sources */,
 				C662E8F71D8E232500F66DDB /* FileCustomCell.m in Sources */,
@@ -3735,10 +3837,12 @@
 				C6D3B8191DCB3C5600D174BF /* AFURLConnectionOperation.m in Sources */,
 				C662EA631D8E233E00F66DDB /* JobDetailView+Photo.m in Sources */,
 				C6945CFF1DC9C42B00A69CB3 /* WMTSLayerInfoDelegate.m in Sources */,
+				9C1D7A401EC5546C00C9BDFA /* AMapRouteRecord.m in Sources */,
 				C6945CC41DC9C26200A69CB3 /* SettingControlPanel.m in Sources */,
 				C662EA691D8E233E00F66DDB /* MapJobViewController.m in Sources */,
 				C662EA571D8E233E00F66DDB /* NewDailyJobViewController.m in Sources */,
 				C6945CE71DC9C2FD00A69CB3 /* OMapViewController+CurrentDailyJob.m in Sources */,
+				9C1D7A4A1EC5546C00C9BDFA /* TipView.m in Sources */,
 				C662E8A71D8E230F00F66DDB /* SEFilterControl.m in Sources */,
 				C6945CFE1DC9C42B00A69CB3 /* WMTSLayerInfo.m in Sources */,
 				334FD2EF1DAE34CB00996FD6 /* InfomationView.m in Sources */,
@@ -3808,6 +3912,7 @@
 				C662E8BD1D8E230F00F66DDB /* ModifyPwdViewController.m in Sources */,
 				C662E8A11D8E230F00F66DDB /* DistCalendarItem.m in Sources */,
 				C6945CF31DC9C2FD00A69CB3 /* ZZYDViewController.m in Sources */,
+				9C1D7A4C1EC5546C00C9BDFA /* Util.m in Sources */,
 				C662E8CA1D8E231E00F66DDB /* ServiceProvider.m in Sources */,
 				C6D3B8251DCB3D2800D174BF /* MBProgressHUD.m in Sources */,
 				C662E8B31D8E230F00F66DDB /* PNCircleChart.m in Sources */,
@@ -3819,6 +3924,7 @@
 				C662E8B41D8E230F00F66DDB /* PNColor.m in Sources */,
 				C662E8C11D8E230F00F66DDB /* XYPieChart.m in Sources */,
 				C662E81A1D8E21E000F66DDB /* main.m in Sources */,
+				9C1D7A431EC5546C00C9BDFA /* SystemInfo.m in Sources */,
 				C662E8B21D8E230F00F66DDB /* PNChartLabel.m in Sources */,
 				C6D3B8231DCB3D2800D174BF /* MBProgressHUD+MJ.m in Sources */,
 				C662E8FE1D8E232500F66DDB /* FolderSelectorViewController.m in Sources */,
@@ -3835,6 +3941,7 @@
 				C6945CB91DC9C26200A69CB3 /* CurrentLocationView.m in Sources */,
 				C662EA891D8E235600F66DDB /* MaterialGroupInfo.m in Sources */,
 				C662EA601D8E233E00F66DDB /* FormSelectorViewController.m in Sources */,
+				9C1D7A441EC5546C00C9BDFA /* CACoordLayer.m in Sources */,
 				C662EA501D8E233E00F66DDB /* DailyJobReport.m in Sources */,
 				C662E84B1D8E22FE00F66DDB /* ASINetworkQueue.m in Sources */,
 				C662EC9D1D8E236E00F66DDB /* StorageBaseViewController.m in Sources */,
@@ -3849,6 +3956,7 @@
 				C6945CA51DC9C26200A69CB3 /* ControlPanel.m in Sources */,
 				C662E8461D8E22FE00F66DDB /* ASIDataDecompressor.m in Sources */,
 				C662E8471D8E22FE00F66DDB /* ASIDownloadCache.m in Sources */,
+				9C1D7A461EC5546C00C9BDFA /* MAMutablePolylineRenderer.m in Sources */,
 				C662E8FA1D8E232500F66DDB /* FileListContainerView.m in Sources */,
 				C68234D71DFFBB6A000116D5 /* MJRefreshHeader.m in Sources */,
 				C662E8A81D8E230F00F66DDB /* SEFilterKnob.m in Sources */,

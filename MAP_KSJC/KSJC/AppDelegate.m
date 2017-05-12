@@ -9,6 +9,10 @@
 #import "AppDelegate.h"
 #import "Global.h"
 #import <CoreLocation/CoreLocation.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMap3DMap/MAMapKit/MAOfflineMap.h>
+const static NSString *APIKey = @"1ee0c2876417352634fdde515d651b16";
+
 @interface AppDelegate ()
 @property (strong,nonatomic) CLLocationManager *locationManager;
 @end
@@ -17,6 +21,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [AMapServices sharedServices].apiKey = (NSString *)APIKey;
     //移除水印
     NSError *error;
     NSString *clientID = @"8KlIL7B2KP9eb3Xd";

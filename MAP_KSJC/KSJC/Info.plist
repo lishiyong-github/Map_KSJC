@@ -35,6 +35,10 @@
 	<string>实时定位需要访问GPS</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>实时定位需要访问GPS</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

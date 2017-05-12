@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface GDMapView : UIView
-
+- (void)setLocationInView:(UIView *)view frame:(CGRect)frame;
 @end
