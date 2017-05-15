@@ -6,4 +6,5 @@ target :'KSJC' do
 
 pod 'AMap3DMap'
 pod 'XAspect', '~> 1.0.5'
+pod 'MJExtension', '~> 3.0.13'
 end

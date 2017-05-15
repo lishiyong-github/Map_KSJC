@@ -14,6 +14,8 @@
 #import "AMapRouteRecord.h"
 #import "FileHelper.h"
 #import "SystemInfoView.h"
+#import "LSYShowMsg.h"
+#import <MJExtension.h>
 
 //record
 #import "TracingPoint.h"
@@ -60,6 +62,9 @@
     if (self) {
         [self initmapView];
         [self showRoute];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [LSYShowMsg showNotificationWithTitle:@"test "];
+        });
     }
     return self;
 }
@@ -80,17 +85,10 @@
 - (void)addRoute
 {
     self.record = self.recordArray.firstObject;
-    //add annotation
-    CLLocation *location = self.record.locations[200];
-    MAPointAnnotation *annotation = [[MAPointAnnotation alloc]init];
-    annotation.coordinate = location.coordinate;
-    annotation.title = @"项目名称";
-    annotation.subtitle = @"项目地址";
-    [self.mapView addAnnotation:annotation];
-    //add annotationview
     
     [self initDisplayRoutePolyline];
     //            [self initDisplayTrackingCoords];
+    
 }
 
 - (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation
@@ -110,10 +108,10 @@
         annotationView.pinColor = MAPinAnnotationColorPurple;
         if([annotation.title isEqualToString:@"start"]){
             annotation.title = @"起点";
-            annotationView.imageView.image = [UIImage imageNamed:@"startPoint"];
+//            annotationView.imageView.image = [UIImage imageNamed:@"startPoint"];
         }else if ([annotation.title isEqualToString:@"end"]){
             annotation.title = @"终点";
-            annotationView.imageView.image = [UIImage imageNamed:@"endPoint"];
+//            annotationView.imageView.image = [UIImage imageNamed:@"endPoint"];
         }else{
             annotationView.imageView.image = [UIImage imageNamed:@"locationProject.png"];
             annotationView.imageView.contentMode = UIViewContentModeScaleAspectFit;
@@ -376,10 +374,10 @@
         return;
     }
     
-    if (!self.isRecording)
-    {
-        return;
-    }
+//    if (!self.isRecording)
+//    {
+//        return;
+//    }
     
     if (userLocation.location.horizontalAccuracy < 100 && userLocation.location.horizontalAccuracy > 0)
     {

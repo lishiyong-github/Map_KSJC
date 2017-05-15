@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KSJC/TabViewControllers/MapViewController.m"
-            timestampString = "516245257.282864"
+            filePath = "KSJC/GDMapView/Model/SaveLocationHelper.m"
+            timestampString = "516534029.527443"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
-            landmarkName = "-switchBaseMap"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "+getUserLocations"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

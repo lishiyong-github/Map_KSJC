@@ -10,6 +10,8 @@
 		334FD2EF1DAE34CB00996FD6 /* InfomationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 334FD2EE1DAE34CB00996FD6 /* InfomationView.m */; };
 		334FD2F11DAE350900996FD6 /* InfomationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 334FD2F01DAE350900996FD6 /* InfomationView.xib */; };
 		62B2FE6431B8C5EC8F3C3233 /* libPods-KSJC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 507C6620744F117720307933 /* libPods-KSJC.a */; };
+		9C0BF2A01EC9A95900901F00 /* UserLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BF29F1EC9A95900901F00 /* UserLocationModel.m */; };
+		9C0BF2A31EC9AAC400901F00 /* SaveLocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BF2A21EC9AAC400901F00 /* SaveLocationHelper.m */; };
 		9C1D7A231EC5456E00C9BDFA /* GDMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D7A221EC5456E00C9BDFA /* GDMapView.m */; };
 		9C1D7A401EC5546C00C9BDFA /* AMapRouteRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D7A261EC5546C00C9BDFA /* AMapRouteRecord.m */; };
 		9C1D7A411EC5546C00C9BDFA /* FileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D7A281EC5546C00C9BDFA /* FileHelper.m */; };
@@ -696,6 +698,10 @@
 		507C6620744F117720307933 /* libPods-KSJC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KSJC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55FC424ADFE94C63D9A188ED /* Pods-KSJC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSJC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KSJC/Pods-KSJC.debug.xcconfig"; sourceTree = "<group>"; };
 		926787D810BDD2A784DAF132 /* Pods-KSJC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSJC.release.xcconfig"; path = "Pods/Target Support Files/Pods-KSJC/Pods-KSJC.release.xcconfig"; sourceTree = "<group>"; };
+		9C0BF29E1EC9A95900901F00 /* UserLocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLocationModel.h; sourceTree = "<group>"; };
+		9C0BF29F1EC9A95900901F00 /* UserLocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLocationModel.m; sourceTree = "<group>"; };
+		9C0BF2A11EC9AAC400901F00 /* SaveLocationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveLocationHelper.h; sourceTree = "<group>"; };
+		9C0BF2A21EC9AAC400901F00 /* SaveLocationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveLocationHelper.m; sourceTree = "<group>"; };
 		9C1D7A211EC5456E00C9BDFA /* GDMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDMapView.h; sourceTree = "<group>"; };
 		9C1D7A221EC5456E00C9BDFA /* GDMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDMapView.m; sourceTree = "<group>"; };
 		9C1D7A251EC5546C00C9BDFA /* AMapRouteRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMapRouteRecord.h; sourceTree = "<group>"; };
@@ -1702,6 +1708,10 @@
 				9C1D7A2A1EC5546C00C9BDFA /* MATracePoint+Coding.m */,
 				9C1D7A2B1EC5546C00C9BDFA /* SystemInfo.h */,
 				9C1D7A2C1EC5546C00C9BDFA /* SystemInfo.m */,
+				9C0BF29E1EC9A95900901F00 /* UserLocationModel.h */,
+				9C0BF29F1EC9A95900901F00 /* UserLocationModel.m */,
+				9C0BF2A11EC9AAC400901F00 /* SaveLocationHelper.h */,
+				9C0BF2A21EC9AAC400901F00 /* SaveLocationHelper.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3780,6 +3790,7 @@
 				C12C047A1E1F258A008EF449 /* OMServiceLayer.m in Sources */,
 				C662EA671D8E233E00F66DDB /* JobPhotoView.m in Sources */,
 				C662E8B71D8E230F00F66DDB /* PNLineChartDataItem.m in Sources */,
+				9C0BF2A31EC9AAC400901F00 /* SaveLocationHelper.m in Sources */,
 				C662E8AC1D8E230F00F66DDB /* MZFormSheetController.m in Sources */,
 				C68234DC1DFFBB6A000116D5 /* MJRefreshBackNormalFooter.m in Sources */,
 				C6945CCA1DC9C26200A69CB3 /* UserInfoControlPanel.m in Sources */,
@@ -3927,6 +3938,7 @@
 				9C1D7A431EC5546C00C9BDFA /* SystemInfo.m in Sources */,
 				C662E8B21D8E230F00F66DDB /* PNChartLabel.m in Sources */,
 				C6D3B8231DCB3D2800D174BF /* MBProgressHUD+MJ.m in Sources */,
+				9C0BF2A01EC9A95900901F00 /* UserLocationModel.m in Sources */,
 				C662E8FE1D8E232500F66DDB /* FolderSelectorViewController.m in Sources */,
 				C662E8C01D8E230F00F66DDB /* WhiteSearchBar.m in Sources */,
 				C662ED1A1D8E23B700F66DDB /* Tools.m in Sources */,
