@@ -162,6 +162,12 @@ AGSEnvelope *defaultEnvelope;
     [self initGDMapView];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.gdMapView showRecord];
+}
+
 -(void)createMapBySubThread{
     
     self.visibleLayersDict = [NSMutableDictionary dictionary];

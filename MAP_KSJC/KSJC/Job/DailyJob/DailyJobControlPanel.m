@@ -27,6 +27,8 @@
 #import <AVFoundation/AVCaptureDevice.h>
 #import <AVFoundation/AVMediaFormat.h>
 #import "TypeList.h"
+#import "UserLocationModel.h"
+#import "SaveLocationHelper.h"
 
 @interface DailyJobControlPanel ()<ASIHTTPRequestDelegate,UITextViewDelegate,TypeListDelegate>
 /*{
@@ -421,14 +423,33 @@ static NSString *DATA_SYN_IDENTITY_UPDATE_DAILYJOB_RESUME=@"DATA_SYN_IDENTITY_UP
     if(_theprojectInfo)
     {
         
-        [_detailArray_in addObject:[_theprojectInfo objectForKey:@"company"]];
-        [_detailArray_in addObject:[_theprojectInfo objectForKey:@"contactName"]];
-        [_detailArray_in addObject:[_theprojectInfo objectForKey:@"contactPhone"]];
-        
-        [_detailArray_out addObject:[_theprojectInfo objectForKey:@"xmbh"]];
-        [_detailArray_out addObject:[_theprojectInfo objectForKey:@"slbh"]];
-        [_detailArray_out addObject:[_theprojectInfo objectForKey:@"projectName"]];
-        [_detailArray_out addObject:[_theprojectInfo objectForKey:@"address"]];
+        if ([_theprojectInfo objectForKey:@"company"]) {
+            [_detailArray_in addObject:[_theprojectInfo objectForKey:@"company"]];
+        }
+        if ([_theprojectInfo objectForKey:@"contactName"]) {
+            
+            [_detailArray_in addObject:[_theprojectInfo objectForKey:@"contactName"]];
+        }
+        if ([_theprojectInfo objectForKey:@"contactPhone"]) {
+            
+            [_detailArray_in addObject:[_theprojectInfo objectForKey:@"contactPhone"]];
+        }
+        if ([_theprojectInfo objectForKey:@"xmbh"]) {
+            
+            [_detailArray_out addObject:[_theprojectInfo objectForKey:@"xmbh"]];
+        }
+        if ([_theprojectInfo objectForKey:@"slbh"]) {
+            
+            [_detailArray_out addObject:[_theprojectInfo objectForKey:@"slbh"]];
+        }
+        if ([_theprojectInfo objectForKey:@"projectName"]) {
+            
+            [_detailArray_out addObject:[_theprojectInfo objectForKey:@"projectName"]];
+        }
+        if ([_theprojectInfo objectForKey:@"address"]) {
+
+            [_detailArray_out addObject:[_theprojectInfo objectForKey:@"address"]];
+        }
         
     }
 }
@@ -1448,9 +1469,25 @@ static NSString *DATA_SYN_IDENTITY_UPDATE_DAILYJOB_RESUME=@"DATA_SYN_IDENTITY_UP
     }
     
 }
+//@Lishy
+
+/**
+ 完成巡查 存储当前位置到高德地图
+ */
+- (void)saveUserLocationWithProject
+{
+    UserLocationModel *model = [UserLocationModel new];
+    model.latitude = @(_agsPoint.x);
+    model.longitude = @(_agsPoint.y);
+    model.pid = _theprojectInfo[@"projectId"];
+    model.projectName = _theprojectInfo[@"projectName"];
+    model.company = _theprojectInfo[@"company"];
+    [SaveLocationHelper saveUserLocation:model];
+}
 //完成巡查
 -(void)jobCompleted
 {
+    [self saveUserLocationWithProject];
     [self clearGpsTimer];
     
     if (_mayUploadPhotos.count>0) {
@@ -2214,7 +2251,7 @@ static NSString *DATA_SYN_IDENTITY_UPDATE_DAILYJOB_RESUME=@"DATA_SYN_IDENTITY_UP
         cell.title.text = _infoArray[indexPath.section][indexPath.row];
         if (indexPath.section == 0) {
             
-            if(_theprojectInfo)
+            if(_theprojectInfo && _detailArray_out.count>indexPath.row)
             {
                 cell.detailTitle.text = _detailArray_out[indexPath.row];
             }

@@ -4,19 +4,13 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KSJC/GDMapView/Model/SaveLocationHelper.m"
-            timestampString = "516589403.707257"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "+getUserLocations"
-            landmarkType = "7">
+            scope = "0"
+            stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -25,12 +19,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KSJC/Job/NewWfProjectViewController.m"
-            timestampString = "516589612.574548"
+            filePath = "KSJC/Job/DailyJob/DailyJobControlPanel.m"
+            timestampString = "516617630.113505"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "2452"
+            endingLineNumber = "2452"
             landmarkName = "-serviceCallback:didFinishReciveJsonData:"
             landmarkType = "7">
          </BreakpointContent>
@@ -41,46 +35,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KSJC/TabViewControllers/BusinessViewController.m"
-            timestampString = "516590188.423195"
+            filePath = "KSJC/Job/DailyJob/DailyJobControlPanel.m"
+            timestampString = "516617630.113505"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "429"
-            endingLineNumber = "429"
-            landmarkName = "-continueDeliver:withBussinessType:"
+            startingLineNumber = "2487"
+            endingLineNumber = "2487"
+            landmarkName = "-serviceCallback:didFinishReciveStringData:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[BusinessViewController continueDeliver:withBussinessType:]"
-                  moduleName = "KSJC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lishiyong/Documents/App/Map_KSJC/MAP_KSJC/KSJC/TabViewControllers/BusinessViewController.m"
-                  timestampString = "516614875.440645"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "429"
-                  endingLineNumber = "429"
-                  offsetFromSymbolStart = "1604">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__60-[BusinessViewController continueDeliver:withBussinessType:]_block_invoke"
-                  moduleName = "KSJC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lishiyong/Documents/App/Map_KSJC/MAP_KSJC/KSJC/TabViewControllers/BusinessViewController.m"
-                  timestampString = "516614875.442937"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "431"
-                  endingLineNumber = "431"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -89,13 +51,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KSJC/Job/NewWfProjectViewController.m"
-            timestampString = "516590455.639899"
+            filePath = "KSJC/GDMapView/GDMapView.m"
+            timestampString = "516619033.260027"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "-onBtnCreateTap:"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "-mapView:viewForAnnotation:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KSJC/GDMapView/GDMapView.m"
+            timestampString = "516619125.149917"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "-mapView:viewForAnnotation:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KSJC/GDMapView/GDMapView.m"
+            timestampString = "516619364.844959"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "-addRoute"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KSJC/Job/DailyJob/DailyJobControlPanel.m"
+            timestampString = "516619505.267293"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1479"
+            endingLineNumber = "1479"
+            landmarkName = "-saveUserLocationWithProject"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

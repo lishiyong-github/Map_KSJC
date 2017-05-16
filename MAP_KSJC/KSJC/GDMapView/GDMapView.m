@@ -15,6 +15,7 @@
 #import "FileHelper.h"
 #import "SystemInfoView.h"
 #import <MJExtension.h>
+#import "SaveLocationHelper.h"
 
 //record
 #import "TracingPoint.h"
@@ -61,8 +62,24 @@
     if (self) {
         [self initmapView];
         [self showRoute];
+        [self showRecord];
     }
     return self;
+}
+
+- (void)showRecord
+{
+    NSArray *userLocationArray = [SaveLocationHelper getUserLocations];
+    for (UserLocationModel *model in userLocationArray) {
+        MAPointAnnotation *annotation = [[MAPointAnnotation alloc]init];
+        CLLocationCoordinate2D location ;
+        location.latitude = [model.latitude doubleValue];
+        location.longitude = [model.longitude doubleValue];
+        annotation.coordinate = location;
+        annotation.title = model.projectName;
+        annotation.subtitle = model.company;
+        [self.mapView addAnnotation:annotation];
+    }
 }
 
 - (void)showRoute

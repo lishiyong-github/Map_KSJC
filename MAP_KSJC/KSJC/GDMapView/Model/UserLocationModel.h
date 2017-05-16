@@ -14,4 +14,5 @@
 @property (nonatomic,strong) NSString *pid;
 @property (nonatomic,strong) NSString *projectName;
 @property (nonatomic,strong) NSString *projectAddress;
+@property (nonatomic,strong) NSString *company;
 @end

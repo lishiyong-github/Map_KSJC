@@ -130,7 +130,7 @@ static BOOL nibsRegistered = NO;
     [self configPhgzButton];
 }
 
-/******************* 昆山需求更改 2017/5/8——@lishy *******************/
+/******************* 昆山需求更改 2017/5/8 *******************/
 - (void)configPhgzButton
 {
     UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(110, 3, 20, 30)];
@@ -299,7 +299,6 @@ static BOOL nibsRegistered = NO;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //@lishy
     static NSString *CustomCellIdentifier = @"ProjectCellIdentifier";
     
     if (!nibsRegistered) {
