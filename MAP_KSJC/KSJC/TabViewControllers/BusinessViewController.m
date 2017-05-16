@@ -299,7 +299,7 @@ static BOOL nibsRegistered = NO;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    //@lishy
     static NSString *CustomCellIdentifier = @"ProjectCellIdentifier";
     
     if (!nibsRegistered) {

@@ -49,7 +49,7 @@
     _project = value;
     self.lblProjectName.text = [value objectForKey:@"projectName"];
     self.lblCompany.text = [value objectForKey:@"address"];
-    self.lblDateTime.text = [value objectForKey:@"time"];
+    self.lblDateTime.text = [NSString stringWithFormat:@"第%@次巡查",[value objectForKey:@"count"]];
     self.labelName.text = [value objectForKey:@"teamMate"];
     [self showDoubleRandom:[[value objectForKey:@"isDoubleRamdom"] isEqualToString:@"是"]];
 }

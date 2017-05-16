@@ -893,7 +893,7 @@
         [addLogBtn setTitle:@"添加巡查" forState:UIControlStateNormal];
         [addLogBtn addTarget:self action:@selector(newLog) forControlEvents:UIControlEventTouchUpInside];
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openOrCloseHeader:)];
-//        [headView addGestureRecognizer:tap];
+        //        [headView addGestureRecognizer:tap];
         [headView addSubview:addLogBtn];
         //
         return headView;
@@ -916,6 +916,14 @@
         
         return nil;
     
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (tableView.tag == 3 || tableView.tag == 30) {
+        return 30;
+    }
+    return 0.1;
 }
 
 
