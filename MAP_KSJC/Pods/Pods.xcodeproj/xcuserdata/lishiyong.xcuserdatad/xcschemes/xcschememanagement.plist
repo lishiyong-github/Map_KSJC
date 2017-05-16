@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>LSYXAspect.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MJExtension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +32,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>152B42B7F60E4CDD67660F39BEFDB8C3</key>
+		<key>157E52F177CFF535B3DD2CB7C4C20182</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>157E52F177CFF535B3DD2CB7C4C20182</key>
+		<key>4808D4A80130DA966EA6BD83ADF2C120</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -43,6 +48,11 @@
 			<true/>
 		</dict>
 		<key>A316B54C67E947D23CECD230FA5BFAEF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C338B86E90C0C285F30313E446E74AA6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

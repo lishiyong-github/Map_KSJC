@@ -4,6 +4,8 @@ PODS:
   - AMapFoundation (1.4.0)
   - LSYShowController (1.0.0.1):
     - XAspect (~> 1.0.5)
+  - LSYXAspect (1.0.0.0):
+    - XAspect (~> 1.0.5)
   - MJExtension (3.0.13)
   - XAspect (1.0.5):
     - XAspect/Core (= 1.0.5)
@@ -15,15 +17,17 @@ PODS:
 DEPENDENCIES:
   - AMap3DMap
   - LSYShowController
+  - LSYXAspect
   - MJExtension (~> 3.0.13)
 
 SPEC CHECKSUMS:
   AMap3DMap: 4d0a53d0e57c7c758560225dfdaf593b306bd468
   AMapFoundation: 458974f46a39df8407fd818ab83d2630d494c726
   LSYShowController: 7fa1b819d1fecb89f47a1ed225a31c807342c908
+  LSYXAspect: f4ec345b9ae9a4adabbf4fb95a2ede71566e7193
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   XAspect: db50bf487f92dbb8557a7a5365556966c8493af8
 
-PODFILE CHECKSUM: d9949509c533cef9c06eb94034bfd650d29c8693
+PODFILE CHECKSUM: d31abb08ae0f4d949d132b043d3ad4004f11ec25
 
 COCOAPODS: 1.2.1

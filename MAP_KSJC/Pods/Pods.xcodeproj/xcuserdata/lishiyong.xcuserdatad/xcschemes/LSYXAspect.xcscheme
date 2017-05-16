@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4808D4A80130DA966EA6BD83ADF2C120'
-               BlueprintName = 'Pods-KSJC'
+               BlueprintIdentifier = 'C338B86E90C0C285F30313E446E74AA6'
+               BlueprintName = 'LSYXAspect'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-KSJC.a'>
+               BuildableName = 'libLSYXAspect.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
