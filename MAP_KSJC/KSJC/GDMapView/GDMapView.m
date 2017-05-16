@@ -14,7 +14,6 @@
 #import "AMapRouteRecord.h"
 #import "FileHelper.h"
 #import "SystemInfoView.h"
-#import "LSYShowMsg.h"
 #import <MJExtension.h>
 
 //record
@@ -62,9 +61,6 @@
     if (self) {
         [self initmapView];
         [self showRoute];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [LSYShowMsg showNotificationWithTitle:@"test "];
-        });
     }
     return self;
 }

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "XAspect.h"
 #import <UIKit/UIKit.h>
-#import "LSYShowMsg.h"
+#import "MessageLabel.h"
 
 // A aspect namespace for the aspect implementation field (mandatory).
 #define AtAspect UIViewController
@@ -23,28 +23,11 @@ AspectPatch(-, void, viewDidAppear:(BOOL)animated)
 {
     // Add your custom implementation here.
     if([self isKindOfClass:[UIViewController class]]){
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            NSLog(@"%@",NSStringFromClass([self class]));
-            [LSYShowMsg showNotificationWithTitle:NSStringFromClass([self class])];
-        });
+        [MessageLabel showMessage:NSStringFromClass([self class])];
     }
     
     // Forward the message to the source implementation.
     return XAMessageForward(viewDidAppear:animated);
-}
-
-AspectPatch(-, void, viewWillAppear:(BOOL)animated)
-{
-    // Add your custom implementation here.
-    if([self isKindOfClass:[UIViewController class]]){
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            
-            [LSYShowMsg showNotificationWithTitle:NSStringFromClass([self class])];
-        });
-    }
-    
-    // Forward the message to the source implementation.
-    return XAMessageForward(viewWillAppear:animated);
 }
 
 @end
