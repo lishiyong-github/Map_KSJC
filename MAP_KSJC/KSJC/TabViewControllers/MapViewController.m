@@ -629,6 +629,7 @@ AGSEnvelope *defaultEnvelope;
     self.gdMapView = [[GDMapView alloc] initWithFrame:self.mapView.frame];
     [self.gdMapView setLocationInView:self.view frame:CGRectMake(1024 - 80, 768-44-80, 40, 40)];
     [self.mapView addSubview:self.gdMapView];
+    [self.gdMapView showRoute];
     
     //    self.traceManager = [[MATraceManager alloc] init];
 }

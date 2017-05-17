@@ -143,6 +143,17 @@ static NSString *DATA_SYN_IDENTITY_UPDATE_DAILYJOB_RESUME=@"DATA_SYN_IDENTITY_UP
     
 }
 
+- (GDMapView *)gdmapView
+{
+    if (!_gdmapView) {
+        CGFloat x = 368;
+        CGRect frame = CGRectMake(x, 0, SCREEN_WIDTH - x - 12, 495);
+        _gdmapView = [[GDMapView alloc]initWithFrame:frame];
+        [_gdmapView setLocationInView:self frame:CGRectMake(frame.origin.x + 40, frame.size.height - 80, 40, 40)];
+    }
+    return _gdmapView;
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -246,8 +257,8 @@ static NSString *DATA_SYN_IDENTITY_UPDATE_DAILYJOB_RESUME=@"DATA_SYN_IDENTITY_UP
     // 键盘唤起和隐藏的通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
-    
-    self.gdmapView = [[GDMapView alloc]initWithFrame:CGRectZero];
+    //@lishy
+    [self addSubview:self.gdmapView];
     
 }
 
@@ -933,6 +944,7 @@ static NSString *DATA_SYN_IDENTITY_UPDATE_DAILYJOB_RESUME=@"DATA_SYN_IDENTITY_UP
     else{
         if ([[_jobInfo objectForKey:@"status"] isEqualToString:@"paused"])
         {//暂停
+            [self.gdmapView setHidden:YES];//@Lishy
             self.pauseView.hidden = NO;
             NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
             [formatter setDateFormat:@"MM/dd HH:mm:ss"];
@@ -1070,10 +1082,12 @@ static NSString *DATA_SYN_IDENTITY_UPDATE_DAILYJOB_RESUME=@"DATA_SYN_IDENTITY_UP
 }
 
 -(NSString*)getProjectLocation{
-    NSString *pointXY;
-    if (_agsPoint!=nil) {
-        pointXY = [NSString stringWithFormat:@"%f,%f",_agsPoint.x,_agsPoint.y];
-    }
+    //@lishy
+    NSArray *arr = [self.gdmapView getLocation];
+    NSString *pointXY = [NSString stringWithFormat:@"%@,%@",arr.firstObject,arr.lastObject];
+//    if (_agsPoint!=nil) {
+//        pointXY = [NSString stringWithFormat:@"%f,%f",_agsPoint.x,_agsPoint.y];
+//    }
     return pointXY;
 }
 
@@ -2065,6 +2079,7 @@ static NSString *DATA_SYN_IDENTITY_UPDATE_DAILYJOB_RESUME=@"DATA_SYN_IDENTITY_UP
 
 //取消暂停
 - (IBAction)onBtnResumeTap:(id)sender {
+    [self.gdmapView setHidden:NO];
     [_jobInfo setObject:@"started" forKey:@"status"];
     self.pauseView.hidden = YES;
     NSDate *now = [NSDate date];
@@ -2088,6 +2103,7 @@ static NSString *DATA_SYN_IDENTITY_UPDATE_DAILYJOB_RESUME=@"DATA_SYN_IDENTITY_UP
 //暂停巡查
 -(void)doPauseJob{
     
+    [self.gdmapView setHidden:YES];
     [_jobInfo setObject:@"paused" forKey:@"status"];
     NSDate *now = [NSDate date];
     [[_jobInfo objectForKey:@"times"] addObject:now];
@@ -3358,6 +3374,4 @@ static NSString *DATA_SYN_IDENTITY_UPDATE_DAILYJOB_RESUME=@"DATA_SYN_IDENTITY_UP
     [self.mapView.callout moveCalloutTo:graphic.geometry.envelope.center screenOffset:CGPointZero animated:true];
     
 }
-
-
 @end

@@ -24,6 +24,11 @@
 - (void)showRecord;
 
 /**
+ 显示线路
+ */
+- (void)showRoute;
+
+/**
  获取当前位置
 
  @return return CLLocationCoordinate2D

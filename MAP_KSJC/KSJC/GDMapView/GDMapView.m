@@ -61,8 +61,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self initmapView];
-        [self showRoute];
-        [self showRecord];
     }
     return self;
 }
@@ -70,6 +68,12 @@
 - (NSArray *)getLocation
 {
     return @[@(self.mapView.centerCoordinate.latitude),@(self.mapView.centerCoordinate.longitude)];
+}
+
+- (void)setHidden:(BOOL)hidden
+{
+    [super setHidden:hidden];
+    [_locationBtn setHidden:hidden];
 }
 
 - (void)showRecord
@@ -95,6 +99,7 @@
        
             
             [self addRoute];
+            [self showRecord];
             
         });
     }
@@ -215,6 +220,8 @@
     self.mapView.showsIndoorMap = NO;
     self.mapView.delegate = self;
     self.mapView.userTrackingMode = MAUserTrackingModeFollowWithHeading;
+//    self.mapView.logoCenter = CGPointMake(-30, -30);
+//    self.mapView.logoSize = CGSizeZero;
     
     [self addSubview:self.mapView];
     self.traceManager = [[MATraceManager alloc] init];
