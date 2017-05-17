@@ -26,7 +26,7 @@
     NSMutableArray *_tracking;
     CFTimeInterval _duration;
 }
-@property (nonatomic,strong) MAMapView *mapView;
+@property (nonatomic, strong) MAMapView *mapView;
 @property (nonatomic, strong) MATraceManager *traceManager;
 @property (nonatomic, strong) StatusView *statusView;
 @property (nonatomic, strong) TipView *tipView;
@@ -65,6 +65,11 @@
         [self showRecord];
     }
     return self;
+}
+
+- (NSArray *)getLocation
+{
+    return @[@(self.mapView.centerCoordinate.latitude),@(self.mapView.centerCoordinate.longitude)];
 }
 
 - (void)showRecord

@@ -22,4 +22,11 @@
  显示检查记录轨迹
  */
 - (void)showRecord;
+
+/**
+ 获取当前位置
+
+ @return return CLLocationCoordinate2D
+ */
+- (NSArray *)getLocation;
 @end

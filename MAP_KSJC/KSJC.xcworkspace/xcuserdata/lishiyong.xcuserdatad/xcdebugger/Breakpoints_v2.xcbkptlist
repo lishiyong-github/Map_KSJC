@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KSJC/Job/DailyJob/DailyJobControlPanel.m"
-            timestampString = "516617630.113505"
+            timestampString = "516621256.048567"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2452"
-            endingLineNumber = "2452"
+            startingLineNumber = "2459"
+            endingLineNumber = "2459"
             landmarkName = "-serviceCallback:didFinishReciveJsonData:"
             landmarkType = "7">
          </BreakpointContent>
@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KSJC/Job/DailyJob/DailyJobControlPanel.m"
-            timestampString = "516617630.113505"
+            timestampString = "516621256.048567"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2487"
-            endingLineNumber = "2487"
+            startingLineNumber = "2494"
+            endingLineNumber = "2494"
             landmarkName = "-serviceCallback:didFinishReciveStringData:"
             landmarkType = "7">
          </BreakpointContent>
@@ -51,12 +51,44 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KSJC/GDMapView/GDMapView.m"
-            timestampString = "516619033.260027"
+            filePath = "KSJC/Job/DailyJob/DailyJobControlPanel.m"
+            timestampString = "516621256.048567"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "1485"
+            endingLineNumber = "1485"
+            landmarkName = "-saveUserLocationWithProject"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KSJC/Job/DailyJob/DailyJobControlPanel.m"
+            timestampString = "516621256.048567"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1489"
+            endingLineNumber = "1489"
+            landmarkName = "-saveUserLocationWithProject"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KSJC/GDMapView/GDMapView.m"
+            timestampString = "516677198.16436"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "-mapView:viewForAnnotation:"
             landmarkType = "7">
          </BreakpointContent>
@@ -68,7 +100,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KSJC/GDMapView/GDMapView.m"
-            timestampString = "516619125.149917"
+            timestampString = "516677262.770565"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "134"
@@ -84,12 +116,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KSJC/GDMapView/GDMapView.m"
-            timestampString = "516619364.844959"
+            timestampString = "516677263.350501"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "-addRoute"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "-mapView:viewForAnnotation:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -99,13 +131,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KSJC/Job/DailyJob/DailyJobControlPanel.m"
-            timestampString = "516619505.267293"
+            filePath = "KSJC/GDMapView/GDMapView.m"
+            timestampString = "516677263.916482"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1479"
-            endingLineNumber = "1479"
-            landmarkName = "-saveUserLocationWithProject"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "-mapView:viewForAnnotation:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

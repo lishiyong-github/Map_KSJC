@@ -30,6 +30,9 @@
 #import "UserLocationModel.h"
 #import "SaveLocationHelper.h"
 
+//tets
+#import "GDMapView.h"
+
 @interface DailyJobControlPanel ()<ASIHTTPRequestDelegate,UITextViewDelegate,TypeListDelegate>
 /*{
  "rn": "1",
@@ -123,6 +126,7 @@
 
 @property (strong,nonatomic) AGSPoint * agsPoint;
 @property (strong,nonatomic) UIImageView * imageView;
+@property (nonatomic,strong) GDMapView *gdmapView;
 
 @end
 @implementation DailyJobControlPanel
@@ -242,6 +246,8 @@ static NSString *DATA_SYN_IDENTITY_UPDATE_DAILYJOB_RESUME=@"DATA_SYN_IDENTITY_UP
     // 键盘唤起和隐藏的通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
+    self.gdmapView = [[GDMapView alloc]initWithFrame:CGRectZero];
     
 }
 
@@ -1477,8 +1483,9 @@ static NSString *DATA_SYN_IDENTITY_UPDATE_DAILYJOB_RESUME=@"DATA_SYN_IDENTITY_UP
 - (void)saveUserLocationWithProject
 {
     UserLocationModel *model = [UserLocationModel new];
-    model.latitude = @(_agsPoint.x);
-    model.longitude = @(_agsPoint.y);
+    NSArray *arr = [self.gdmapView getLocation];
+    model.latitude = arr.firstObject;
+    model.longitude = arr.lastObject;
     model.pid = _theprojectInfo[@"projectId"];
     model.projectName = _theprojectInfo[@"projectName"];
     model.company = _theprojectInfo[@"company"];
