@@ -14,7 +14,6 @@
                 <outlet property="btnDefaultRCXC" destination="NtL-n7-4Vj" id="KZG-BB-Bwt"/>
                 <outlet property="btnSwitchMap" destination="nYv-hX-CU0" id="ChW-wS-uiB"/>
                 <outlet property="businessTypeGroupContainer" destination="N9H-BG-Nop" id="yvH-QS-SZ4"/>
-                <outlet property="layerGroupContainer" destination="sPk-dE-oTm" id="REY-9h-4rN"/>
                 <outlet property="mapContainer" destination="whu-Wu-407" id="NyP-4t-qny"/>
                 <outlet property="mapTypeSelectorImg" destination="rzB-0m-0bJ" id="Gy6-2b-cM0"/>
                 <outlet property="mapView" destination="6y9-Kf-z1R" id="vPt-tQ-zNa"/>
@@ -219,14 +218,14 @@
                             <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地图数据" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="udC-dV-eUP">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地图数据" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="udC-dV-eUP">
                             <rect key="frame" x="11" y="216" width="109" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="40" sectionHeaderHeight="1" sectionFooterHeight="1" id="pgZ-fL-Ig5">
+                        <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="40" sectionHeaderHeight="1" sectionFooterHeight="1" id="pgZ-fL-Ig5">
                             <rect key="frame" x="7" y="254" width="245" height="466"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
