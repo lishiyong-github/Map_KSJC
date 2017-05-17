@@ -1504,6 +1504,8 @@ static NSString *DATA_SYN_IDENTITY_UPDATE_DAILYJOB_RESUME=@"DATA_SYN_IDENTITY_UP
     model.projectName = _theprojectInfo[@"projectName"];
     model.company = _theprojectInfo[@"company"];
     [SaveLocationHelper saveUserLocation:model];
+    //
+    [[NSNotificationCenter defaultCenter] postNotificationName:kUpdateBusinessViewController object:nil];
 }
 //完成巡查
 -(void)jobCompleted

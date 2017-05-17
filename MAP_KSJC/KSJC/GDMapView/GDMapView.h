@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class UserLocationModel;
 @interface GDMapView : UIView
 
+/**
+ 清除所有标注
+ */
+- (void)clearAnnotations;
 /**
  设置地图的展示位置
 
@@ -27,6 +31,13 @@
  显示线路
  */
 - (void)showRoute;
+
+/**
+ 展示项目位置
+
+ @param userLocation 当前的项目点的具体定位
+ */
+- (void)showProjectLocation:(UserLocationModel *)userLocation;
 
 /**
  获取当前位置

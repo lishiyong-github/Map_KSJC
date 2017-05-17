@@ -14,8 +14,8 @@
 #define AtAspect ObjectLifetime
 
 // Create an aspect patch field for the class you want to add the aspect patches to.
-#define AtAspectOfClass NSObject
-@classPatchField(NSObject)
+#define AtAspectOfClass UIViewController
+@classPatchField(UIViewController)
 
 // Intercept the target objc message.
 AspectPatch(-, instancetype, init)

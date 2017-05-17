@@ -20,6 +20,8 @@
 //#define BOOL downLoad=false;
 #import "MapJobViewController.h"
 #import "MBProgressHUD+MJ.h"
+#import "GDMapView.h"
+#import "UserLocationModel.h"
 
 @interface JobDetailView ()<NewDailyJobDelegate,MapJobViewControllerDelegate>
 
@@ -36,7 +38,7 @@
 @property (nonatomic,strong)NSMutableArray *materials;
 @property (nonatomic,strong)NSMutableArray *logs;
 @property (nonatomic,strong)NSMutableArray *phLogs;
-
+@property (nonatomic,strong) GDMapView *gdMapView;
 //保存位置范围
 @property (nonatomic,assign)double xmin;
 @property (nonatomic,assign)double xmax;
@@ -378,6 +380,9 @@
         [self clearGraphics];
         //巡查记录定位
         [self recordLocation:_project];
+        //加载高德
+        [self.gdMapView clearAnnotations];
+        [self setProjectLocation];
         /*
          NSString *xmbh = [_project objectForKey:PROJECTKEY_XMBH];
          NSNumber *layerid = [KSJZHXID objectAtIndex:0];
@@ -1939,7 +1944,7 @@
     //    [_mapLocationView projectLocationForGPS:projectLocation];
 }
 
-
+//@lishy map
 //定位按钮点击方法
 -(IBAction)onBtnLationProject:(id)sender{
     
@@ -1956,10 +1961,24 @@
         _mapLocationView.delegate = self;
         [self addSubview:_mapLocationView];
         _mapLocationView.hidden = YES;
+        
+        _gdMapView = [[GDMapView alloc]init];
+        if(self.jumpfromMap)
+        {
+            _gdMapView.frame =CGRectMake(0, 100, 794, 615);
+        }
+        else
+        {
+            _gdMapView.frame=CGRectMake(0, 100, 732, 615);
+        }
+        [self addSubview:self.gdMapView];
+        _gdMapView.hidden = YES;
     }
     
     if (_mapLocationView.hidden) {
         _mapLocationView.hidden = NO;
+        _gdMapView.hidden = NO;
+        [self setProjectLocation];
         self.btnLocation.selected = YES;
         [_mapLocationView clearGraphic];
         //设置请求
@@ -1989,6 +2008,7 @@
         [self recordLocation:_project];
     }
     else{
+        _gdMapView.hidden = YES;
         _mapLocationView.hidden = YES;
         self.btnLocation.selected = NO;
         [self clearGraphics];
@@ -2003,6 +2023,24 @@
     [self hideStopworkForm];
 }
 
+/**
+ 设置项目位置在 高德地图中
+ */
+- (void)setProjectLocation
+{
+    //监察记录
+    NSArray *logArr = _theProject[@"log"];
+    for (NSDictionary *projectDic in logArr) {
+//        NSDictionary *projectDic = logArr.firstObject;
+        UserLocationModel *model = [[UserLocationModel alloc]init];
+        model.latitude = [NSNumber numberWithDouble:[[NSString stringWithFormat:@"%@",projectDic[@"x"]] doubleValue]];
+        model.longitude = [NSNumber numberWithDouble:[[NSString stringWithFormat:@"%@",projectDic[@"y"]] doubleValue]];
+        model.pid = _theProject[@"projectId"];
+        model.projectName = _theProject[@"projectName"];
+        model.company = _theProject[@"company"];
+        [self.gdMapView showProjectLocation:model];
+    }
+}
 //打开照片
 - (IBAction)onBtnOpenPhotoList:(id)sender {
     _btnGetPhoto.hidden = YES;

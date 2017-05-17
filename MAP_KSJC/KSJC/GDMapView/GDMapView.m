@@ -52,6 +52,12 @@
 
 @property (nonatomic, strong) NSMutableArray *recordArray;
 @property (nonatomic, strong) AMapRouteRecord *record;
+
+
+/**
+ 记录当前的标注
+ */
+@property (nonatomic,strong) NSMutableArray *annotations;
 @end
 
 /******************* 高德地图 *******************/
@@ -61,6 +67,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self initmapView];
+        self.annotations = [NSMutableArray array];
     }
     return self;
 }
@@ -80,15 +87,33 @@
 {
     NSArray *userLocationArray = [SaveLocationHelper getUserLocations];
     for (UserLocationModel *model in userLocationArray) {
-        MAPointAnnotation *annotation = [[MAPointAnnotation alloc]init];
-        CLLocationCoordinate2D location ;
-        location.latitude = [model.latitude doubleValue];
-        location.longitude = [model.longitude doubleValue];
-        annotation.coordinate = location;
-        annotation.title = model.projectName;
-        annotation.subtitle = model.company;
-        [self.mapView addAnnotation:annotation];
+        [self showProjectLocation:model];
     }
+}
+
+- (void)clearAnnotations
+{
+    [self.mapView removeAnnotations:self.annotations];
+    [self.annotations removeAllObjects];
+}
+
+/**
+ 展示项目位置
+ 
+ @param userLocation 当前的项目点的具体定位
+ */
+- (void)showProjectLocation:(UserLocationModel *)userLocation
+{
+    MAPointAnnotation *annotation = [[MAPointAnnotation alloc]init];
+    CLLocationCoordinate2D location ;
+    location.latitude = [userLocation.latitude doubleValue];
+    location.longitude = [userLocation.longitude doubleValue];
+    annotation.coordinate = location;
+    annotation.title = userLocation.projectName;
+    annotation.subtitle = userLocation.company;
+    [self.mapView addAnnotation:annotation];
+    [self.annotations addObject:annotation];
+    
 }
 
 - (void)showRoute
@@ -136,8 +161,8 @@
             annotation.title = @"终点";
 //            annotationView.imageView.image = [UIImage imageNamed:@"endPoint"];
         }else{
-            annotationView.imageView.image = [UIImage imageNamed:@"locationProject.png"];
-            annotationView.imageView.contentMode = UIViewContentModeScaleAspectFit;
+//            annotationView.imageView.image = [UIImage imageNamed:@"locationProject.png"];
+//            annotationView.imageView.contentMode = UIViewContentModeScaleAspectFit;
         }
         return annotationView;
     }

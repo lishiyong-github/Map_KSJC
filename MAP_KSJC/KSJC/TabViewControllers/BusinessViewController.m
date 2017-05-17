@@ -40,10 +40,15 @@ static BOOL nibsRegistered = NO;
     }
     return self;
 }
-
+- (void)refreshData
+{
+    [self loadAllData];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshData) name:kUpdateBusinessViewController object:nil];
+    
     _pagesize = @"100";
     if (_newDailyJobViewController == nil) {
         //新建巡查界面

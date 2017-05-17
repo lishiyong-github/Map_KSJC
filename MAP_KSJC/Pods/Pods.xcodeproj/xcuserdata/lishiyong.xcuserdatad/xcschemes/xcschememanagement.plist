@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>LSYShowController.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>LSYXAspect.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,17 +27,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>157E52F177CFF535B3DD2CB7C4C20182</key>
+		<key>11C35E87A3C4B692A0C2AD1C5BBE8491</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4808D4A80130DA966EA6BD83ADF2C120</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>986618B2AF8FB0F4481E9D46BDF3060E</key>
+		<key>309EF55633A085818EFFA89526C85C76</key>
 		<dict>
 			<key>primary</key>
 			<true/>
