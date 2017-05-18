@@ -547,7 +547,9 @@ static BOOL nibsRegistered = NO;
                     _wfDefaultSelectIndex = i;
                 }
             }
-            [self.dataSource addObject:[NSMutableDictionary dictionaryWithDictionary:item]];
+            //添加随机数据
+            NSMutableDictionary *randomDic = [self insertRandomData:item];
+            [self.dataSource addObject:randomDic];
             i++;
         }
         _wfDefaultSelectIndex = _selectedIndex;
@@ -591,6 +593,20 @@ static BOOL nibsRegistered = NO;
         [self hideNewProjectButton];
     }
     
+}
+
+- (NSMutableDictionary *)insertRandomData:(NSDictionary *)dict
+{
+    //规划放线、规划验线、验±0.00、首层核验、标准层核验、外装修核验、竣工验收
+    NSMutableDictionary *finishDict = dict.mutableCopy;
+    if ([dict[@"count"] integerValue] == 0) {
+        [finishDict setObject:@"" forKey:@"count"];
+    }else{
+        NSArray *randomArray = @[@"规划放线",@"规划验线",@"验±0.00",@"首层核验",@"标准层核验",@"外装修核验",@"竣工验收"];
+        NSInteger randomIndex = arc4random_uniform(randomArray.count-1);
+        [finishDict setObject:randomArray[randomIndex] forKey:@"count"];
+    }
+    return finishDict;
 }
 
 //显示cell某行详情数据
