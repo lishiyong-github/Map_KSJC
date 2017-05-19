@@ -45,19 +45,6 @@
 		C1D6A77E1E037CC50070C9FE /* 昆山站.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C1D6A77D1E037CC50070C9FE /* 昆山站.gpx */; };
 		C1E263081E5189FB009A2C54 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E263061E5189FB009A2C54 /* location.png */; };
 		C1E263091E5189FB009A2C54 /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E263071E5189FB009A2C54 /* location@2x.png */; };
-		C6077C7A1DD0C6CD008DE3D8 /* fileicon.png in Resources */ = {isa = PBXBuildFile; fileRef = C6077C791DD0C6CD008DE3D8 /* fileicon.png */; };
-		C6077C871DD0C6EC008DE3D8 /* filetype-excel48.png in Resources */ = {isa = PBXBuildFile; fileRef = C6077C7B1DD0C6EC008DE3D8 /* filetype-excel48.png */; };
-		C6077C881DD0C6EC008DE3D8 /* filetype-excel72.png in Resources */ = {isa = PBXBuildFile; fileRef = C6077C7C1DD0C6EC008DE3D8 /* filetype-excel72.png */; };
-		C6077C891DD0C6EC008DE3D8 /* filetype-folder48.png in Resources */ = {isa = PBXBuildFile; fileRef = C6077C7D1DD0C6EC008DE3D8 /* filetype-folder48.png */; };
-		C6077C8A1DD0C6EC008DE3D8 /* filetype-folder72.png in Resources */ = {isa = PBXBuildFile; fileRef = C6077C7E1DD0C6EC008DE3D8 /* filetype-folder72.png */; };
-		C6077C8B1DD0C6EC008DE3D8 /* filetype-img48.png in Resources */ = {isa = PBXBuildFile; fileRef = C6077C7F1DD0C6EC008DE3D8 /* filetype-img48.png */; };
-		C6077C8C1DD0C6EC008DE3D8 /* filetype-img72.png in Resources */ = {isa = PBXBuildFile; fileRef = C6077C801DD0C6EC008DE3D8 /* filetype-img72.png */; };
-		C6077C8D1DD0C6EC008DE3D8 /* filetype-ppt48.png in Resources */ = {isa = PBXBuildFile; fileRef = C6077C811DD0C6EC008DE3D8 /* filetype-ppt48.png */; };
-		C6077C8E1DD0C6EC008DE3D8 /* filetype-ppt72.png in Resources */ = {isa = PBXBuildFile; fileRef = C6077C821DD0C6EC008DE3D8 /* filetype-ppt72.png */; };
-		C6077C8F1DD0C6EC008DE3D8 /* filetype-unknow48.png in Resources */ = {isa = PBXBuildFile; fileRef = C6077C831DD0C6EC008DE3D8 /* filetype-unknow48.png */; };
-		C6077C901DD0C6EC008DE3D8 /* filetype-unknow72.png in Resources */ = {isa = PBXBuildFile; fileRef = C6077C841DD0C6EC008DE3D8 /* filetype-unknow72.png */; };
-		C6077C911DD0C6EC008DE3D8 /* filetype-word48.png in Resources */ = {isa = PBXBuildFile; fileRef = C6077C851DD0C6EC008DE3D8 /* filetype-word48.png */; };
-		C6077C921DD0C6EC008DE3D8 /* filetype-word72.png in Resources */ = {isa = PBXBuildFile; fileRef = C6077C861DD0C6EC008DE3D8 /* filetype-word72.png */; };
 		C60C09581E10AA2400D1CD6C /* phLogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C60C09561E10AA2400D1CD6C /* phLogCell.m */; };
 		C60C09591E10AA2400D1CD6C /* phLogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C60C09571E10AA2400D1CD6C /* phLogCell.xib */; };
 		C6270BCE1DC9E13A000C5C78 /* MapViewController+BusinessSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = C6270BCB1DC9E13A000C5C78 /* MapViewController+BusinessSearch.m */; };
@@ -70,7 +57,6 @@
 		C64556BC1E0CFB05001D810F /* SifterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C64556BB1E0CFB05001D810F /* SifterViewController.m */; };
 		C64556BF1E0D062D001D810F /* backIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C64556BE1E0D062D001D810F /* backIcon@2x.png */; };
 		C6550F291E6D2911002A0091 /* PickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6550F281E6D2911002A0091 /* PickerView.m */; };
-		C66200E81DF648FC00D60E2F /* pic icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C66200E71DF648FC00D60E2F /* pic icon.png */; };
 		C662E81A1D8E21E000F66DDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C662E8191D8E21E000F66DDB /* main.m */; };
 		C662E81D1D8E21E000F66DDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C662E81C1D8E21E000F66DDB /* AppDelegate.m */; };
 		C662E8201D8E21E000F66DDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C662E81F1D8E21E000F66DDB /* ViewController.m */; };
@@ -218,8 +204,6 @@
 		C662E9C71D8E232E00F66DDB /* icon_selected_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C662E94D1D8E232E00F66DDB /* icon_selected_green@2x.png */; };
 		C662E9C81D8E232E00F66DDB /* icon_star.png in Resources */ = {isa = PBXBuildFile; fileRef = C662E94E1D8E232E00F66DDB /* icon_star.png */; };
 		C662E9C91D8E232E00F66DDB /* icon_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C662E94F1D8E232E00F66DDB /* icon_star@2x.png */; };
-		C662E9CA1D8E232E00F66DDB /* LocationDisplay.png in Resources */ = {isa = PBXBuildFile; fileRef = C662E9501D8E232E00F66DDB /* LocationDisplay.png */; };
-		C662E9CB1D8E232E00F66DDB /* LocationDisplay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C662E9511D8E232E00F66DDB /* LocationDisplay@2x.png */; };
 		C662E9CC1D8E232E00F66DDB /* locationProject.png in Resources */ = {isa = PBXBuildFile; fileRef = C662E9521D8E232E00F66DDB /* locationProject.png */; };
 		C662E9CD1D8E232E00F66DDB /* locationProject@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C662E9531D8E232E00F66DDB /* locationProject@2x.png */; };
 		C662E9CE1D8E232E00F66DDB /* login_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C662E9541D8E232E00F66DDB /* login_bg.jpg */; };
@@ -751,19 +735,6 @@
 		C1D6A77D1E037CC50070C9FE /* 昆山站.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "昆山站.gpx"; sourceTree = "<group>"; };
 		C1E263061E5189FB009A2C54 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
 		C1E263071E5189FB009A2C54 /* location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location@2x.png"; sourceTree = "<group>"; };
-		C6077C791DD0C6CD008DE3D8 /* fileicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fileicon.png; path = ../fileicon.png; sourceTree = "<group>"; };
-		C6077C7B1DD0C6EC008DE3D8 /* filetype-excel48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filetype-excel48.png"; sourceTree = "<group>"; };
-		C6077C7C1DD0C6EC008DE3D8 /* filetype-excel72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filetype-excel72.png"; sourceTree = "<group>"; };
-		C6077C7D1DD0C6EC008DE3D8 /* filetype-folder48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filetype-folder48.png"; sourceTree = "<group>"; };
-		C6077C7E1DD0C6EC008DE3D8 /* filetype-folder72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filetype-folder72.png"; sourceTree = "<group>"; };
-		C6077C7F1DD0C6EC008DE3D8 /* filetype-img48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filetype-img48.png"; sourceTree = "<group>"; };
-		C6077C801DD0C6EC008DE3D8 /* filetype-img72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filetype-img72.png"; sourceTree = "<group>"; };
-		C6077C811DD0C6EC008DE3D8 /* filetype-ppt48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filetype-ppt48.png"; sourceTree = "<group>"; };
-		C6077C821DD0C6EC008DE3D8 /* filetype-ppt72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filetype-ppt72.png"; sourceTree = "<group>"; };
-		C6077C831DD0C6EC008DE3D8 /* filetype-unknow48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filetype-unknow48.png"; sourceTree = "<group>"; };
-		C6077C841DD0C6EC008DE3D8 /* filetype-unknow72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filetype-unknow72.png"; sourceTree = "<group>"; };
-		C6077C851DD0C6EC008DE3D8 /* filetype-word48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filetype-word48.png"; sourceTree = "<group>"; };
-		C6077C861DD0C6EC008DE3D8 /* filetype-word72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filetype-word72.png"; sourceTree = "<group>"; };
 		C60C09551E10AA2400D1CD6C /* phLogCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = phLogCell.h; sourceTree = "<group>"; };
 		C60C09561E10AA2400D1CD6C /* phLogCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = phLogCell.m; sourceTree = "<group>"; };
 		C60C09571E10AA2400D1CD6C /* phLogCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = phLogCell.xib; sourceTree = "<group>"; };
@@ -784,7 +755,6 @@
 		C64556BE1E0D062D001D810F /* backIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backIcon@2x.png"; sourceTree = "<group>"; };
 		C6550F271E6D2911002A0091 /* PickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerView.h; sourceTree = "<group>"; };
 		C6550F281E6D2911002A0091 /* PickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerView.m; sourceTree = "<group>"; };
-		C66200E71DF648FC00D60E2F /* pic icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic icon.png"; sourceTree = "<group>"; };
 		C662E8151D8E21E000F66DDB /* KSJC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSJC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C662E8191D8E21E000F66DDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C662E81B1D8E21E000F66DDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1002,8 +972,6 @@
 		C662E94D1D8E232E00F66DDB /* icon_selected_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_selected_green@2x.png"; sourceTree = "<group>"; };
 		C662E94E1D8E232E00F66DDB /* icon_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_star.png; sourceTree = "<group>"; };
 		C662E94F1D8E232E00F66DDB /* icon_star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_star@2x.png"; sourceTree = "<group>"; };
-		C662E9501D8E232E00F66DDB /* LocationDisplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LocationDisplay.png; sourceTree = "<group>"; };
-		C662E9511D8E232E00F66DDB /* LocationDisplay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LocationDisplay@2x.png"; sourceTree = "<group>"; };
 		C662E9521D8E232E00F66DDB /* locationProject.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locationProject.png; sourceTree = "<group>"; };
 		C662E9531D8E232E00F66DDB /* locationProject@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "locationProject@2x.png"; sourceTree = "<group>"; };
 		C662E9541D8E232E00F66DDB /* login_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login_bg.jpg; sourceTree = "<group>"; };
@@ -1756,27 +1724,6 @@
 			path = ZJSwitch;
 			sourceTree = "<group>";
 		};
-		C6077C781DD0C697008DE3D8 /* matrials */ = {
-			isa = PBXGroup;
-			children = (
-				C66200E71DF648FC00D60E2F /* pic icon.png */,
-				C6077C7B1DD0C6EC008DE3D8 /* filetype-excel48.png */,
-				C6077C7C1DD0C6EC008DE3D8 /* filetype-excel72.png */,
-				C6077C7D1DD0C6EC008DE3D8 /* filetype-folder48.png */,
-				C6077C7E1DD0C6EC008DE3D8 /* filetype-folder72.png */,
-				C6077C7F1DD0C6EC008DE3D8 /* filetype-img48.png */,
-				C6077C801DD0C6EC008DE3D8 /* filetype-img72.png */,
-				C6077C811DD0C6EC008DE3D8 /* filetype-ppt48.png */,
-				C6077C821DD0C6EC008DE3D8 /* filetype-ppt72.png */,
-				C6077C831DD0C6EC008DE3D8 /* filetype-unknow48.png */,
-				C6077C841DD0C6EC008DE3D8 /* filetype-unknow72.png */,
-				C6077C851DD0C6EC008DE3D8 /* filetype-word48.png */,
-				C6077C861DD0C6EC008DE3D8 /* filetype-word72.png */,
-				C6077C791DD0C6CD008DE3D8 /* fileicon.png */,
-			);
-			path = matrials;
-			sourceTree = "<group>";
-		};
 		C662E80C1D8E21E000F66DDB = {
 			isa = PBXGroup;
 			children = (
@@ -2087,7 +2034,6 @@
 				C1D253B51E1BA887003EA1CA /* gps_auto.png */,
 				C1D253B61E1BA887003EA1CA /* gps_maual.png */,
 				C1D253B71E1BA887003EA1CA /* gps_normal.png */,
-				C6077C781DD0C697008DE3D8 /* matrials */,
 				C64556B81E0CFA4E001D810F /* xiasanjiao@2x.png */,
 				C662E9071D8E232E00F66DDB /* background.jpg */,
 				C662E9081D8E232E00F66DDB /* baseMap_Image.png */,
@@ -2164,8 +2110,6 @@
 				C662E94D1D8E232E00F66DDB /* icon_selected_green@2x.png */,
 				C662E94E1D8E232E00F66DDB /* icon_star.png */,
 				C662E94F1D8E232E00F66DDB /* icon_star@2x.png */,
-				C662E9501D8E232E00F66DDB /* LocationDisplay.png */,
-				C662E9511D8E232E00F66DDB /* LocationDisplay@2x.png */,
 				C662E9521D8E232E00F66DDB /* locationProject.png */,
 				C662E9531D8E232E00F66DDB /* locationProject@2x.png */,
 				C662E9541D8E232E00F66DDB /* login_bg.jpg */,
@@ -3196,6 +3140,7 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = C5Y43433E6;
 						DevelopmentTeamName = "Shanghai Digital Intelligence System Technology Co.,Ltd";
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -3259,7 +3204,6 @@
 				C662E9C41D8E232E00F66DDB /* icon_picture.png in Resources */,
 				C662ED011D8E238700F66DDB /* mlzz.png in Resources */,
 				C662E9E51D8E232E00F66DDB /* maptool-year.png in Resources */,
-				C6077C901DD0C6EC008DE3D8 /* filetype-unknow72.png in Resources */,
 				C662EBAC1D8E235F00F66DDB /* blueArrow@2x.png in Resources */,
 				C662EBB91D8E235F00F66DDB /* chart.png in Resources */,
 				C662E9BE1D8E232E00F66DDB /* icon-information.png in Resources */,
@@ -3274,7 +3218,6 @@
 				C662EC131D8E235F00F66DDB /* ding_orange.png in Resources */,
 				C662E9DD1D8E232E00F66DDB /* maptool-month.png in Resources */,
 				C662E9F21D8E232E00F66DDB /* photo.png in Resources */,
-				C6077C8A1DD0C6EC008DE3D8 /* filetype-folder72.png in Resources */,
 				C662E9EC1D8E232E00F66DDB /* nav-desktop.png in Resources */,
 				C662EC211D8E235F00F66DDB /* zhu_orange.png in Resources */,
 				C662EBA21D8E235F00F66DDB /* 1.jpg in Resources */,
@@ -3308,7 +3251,6 @@
 				C662EA5F1D8E233E00F66DDB /* FormAndMaterialCell.xib in Resources */,
 				C662EC0E1D8E235F00F66DDB /* zhu_blue@2x.png in Resources */,
 				C662E9811D8E232E00F66DDB /* background.jpg in Resources */,
-				C6077C8B1DD0C6EC008DE3D8 /* filetype-img48.png in Resources */,
 				C662EC091D8E235F00F66DDB /* wai_blue.png in Resources */,
 				C662EBA31D8E235F00F66DDB /* 2.jpg in Resources */,
 				C662EBE11D8E235F00F66DDB /* Museum@2x.png in Resources */,
@@ -3345,7 +3287,6 @@
 				C662E8FD1D8E232500F66DDB /* FolderCell.xib in Resources */,
 				C662EC961D8E236E00F66DDB /* ProjectStorageViewController.xib in Resources */,
 				C662EA6F1D8E233E00F66DDB /* ProjectCell.xib in Resources */,
-				C6077C8E1DD0C6EC008DE3D8 /* filetype-ppt72.png in Resources */,
 				C662E9AB1D8E232E00F66DDB /* button-rcxc.png in Resources */,
 				C662ECF01D8E238700F66DDB /* app.json in Resources */,
 				C662EBB21D8E235F00F66DDB /* button-down@2x.png in Resources */,
@@ -3381,7 +3322,6 @@
 				C662ECBC1D8E237F00F66DDB /* LeaderStatViewController.xib in Resources */,
 				C662ED161D8E238700F66DDB /* StopWorkForm2.htm in Resources */,
 				C662EC281D8E235F00F66DDB /* ding_green@2x.png in Resources */,
-				C6077C881DD0C6EC008DE3D8 /* filetype-excel72.png in Resources */,
 				C662EBC81D8E235F00F66DDB /* FireStation@2x.png in Resources */,
 				C6F687A61DFA91D800B66F9E /* ProjectBaseMessageCell.xib in Resources */,
 				C662E9EA1D8E232E00F66DDB /* MeasureDistance.png in Resources */,
@@ -3392,7 +3332,6 @@
 				C662ECF91D8E238700F66DDB /* dist.ipad.touchlink.js in Resources */,
 				C662EBEC1D8E235F00F66DDB /* pic_plank_up@2x.png in Resources */,
 				C662ED031D8E238700F66DDB /* save.png in Resources */,
-				C6077C8D1DD0C6EC008DE3D8 /* filetype-ppt48.png in Resources */,
 				C662E9011D8E232500F66DDB /* FolderViewController.xib in Resources */,
 				C662EA6A1D8E233E00F66DDB /* MapJobViewController.xib in Resources */,
 				C6F185A61DF0185500A0C0E7 /* wxz@2x.png in Resources */,
@@ -3442,20 +3381,16 @@
 				C662EC391D8E235F00F66DDB /* Camera_red.png in Resources */,
 				C662EBAF1D8E235F00F66DDB /* button-back.png in Resources */,
 				C662EBC31D8E235F00F66DDB /* filetype-unknow48.png in Resources */,
-				C6077C7A1DD0C6CD008DE3D8 /* fileicon.png in Resources */,
 				C662E9841D8E232E00F66DDB /* bg-addbutton-highlighted.png in Resources */,
 				C662ED021D8E238700F66DDB /* phone.png in Resources */,
 				C662EA6D1D8E233E00F66DDB /* NewWfProjectViewController.xib in Resources */,
 				C17EE5C91E1CE0DF003CDABF /* triangle-right@2x.png in Resources */,
 				C662EC251D8E235F00F66DDB /* Camera_green.png in Resources */,
 				C662EA621D8E233E00F66DDB /* FormSendViewController.xib in Resources */,
-				C6077C891DD0C6EC008DE3D8 /* filetype-folder48.png in Resources */,
 				C662EC331D8E235F00F66DDB /* wei_green.png in Resources */,
 				C662EBE81D8E235F00F66DDB /* pic_plank_among@2x.png in Resources */,
 				C662EA661D8E233E00F66DDB /* JobDetailView.xib in Resources */,
-				C66200E81DF648FC00D60E2F /* pic icon.png in Resources */,
 				C60C09591E10AA2400D1CD6C /* phLogCell.xib in Resources */,
-				C6077C8F1DD0C6EC008DE3D8 /* filetype-unknow48.png in Resources */,
 				C17EE5C81E1CE0DF003CDABF /* triangle-right.png in Resources */,
 				C662EBA91D8E235F00F66DDB /* blackArrow.png in Resources */,
 				C662ECEF1D8E238700F66DDB /* app.js in Resources */,
@@ -3466,7 +3401,6 @@
 				C662EBA61D8E235F00F66DDB /* 5.jpg in Resources */,
 				C662EBD61D8E235F00F66DDB /* icon-star.png in Resources */,
 				C662EC3D1D8E235F00F66DDB /* gai_red.png in Resources */,
-				C6077C8C1DD0C6EC008DE3D8 /* filetype-img72.png in Resources */,
 				C662E9BB1D8E232E00F66DDB /* ht.png in Resources */,
 				C6D554961DD17A320044CD2D /* NewPHGZViewController.xib in Resources */,
 				C662E9C11D8E232E00F66DDB /* icon-plus.png in Resources */,
@@ -3517,7 +3451,6 @@
 				C662EBE61D8E235F00F66DDB /* no-image@2x.png in Resources */,
 				C662EC101D8E235F00F66DDB /* zhuan_blue@2x.png in Resources */,
 				C662EBB41D8E235F00F66DDB /* button-menu@2x.png in Resources */,
-				C662E9CA1D8E232E00F66DDB /* LocationDisplay.png in Resources */,
 				C662ECF11D8E238700F66DDB /* calendar.html in Resources */,
 				C662E8251D8E21E000F66DDB /* Assets.xcassets in Resources */,
 				C662E9871D8E232E00F66DDB /* bg-addbutton@2x.png in Resources */,
@@ -3528,7 +3461,6 @@
 				C6F185A21DF0064500A0C0E7 /* zhankai@2x.png in Resources */,
 				C662ED041D8E238700F66DDB /* send.png in Resources */,
 				C6270BDF1DC9E8AB000C5C78 /* MapViewController.xib in Resources */,
-				C6077C921DD0C6EC008DE3D8 /* filetype-word72.png in Resources */,
 				C662EC4C1D8E235F00F66DDB /* zhuan_red@2x.png in Resources */,
 				C662E98D1D8E232E00F66DDB /* bg-menuitem@2x.png in Resources */,
 				C662EC2F1D8E235F00F66DDB /* stop_green.png in Resources */,
@@ -3573,7 +3505,6 @@
 				C662ECFA1D8E238700F66DDB /* form.htm in Resources */,
 				C662ECF51D8E238700F66DDB /* larr.png in Resources */,
 				C662EA471D8E233E00F66DDB /* CurrentJobView.xib in Resources */,
-				C6077C911DD0C6EC008DE3D8 /* filetype-word48.png in Resources */,
 				C662EC261D8E235F00F66DDB /* Camera_green@2x.png in Resources */,
 				C662E9F01D8E232E00F66DDB /* nav-resource.png in Resources */,
 				C662EC311D8E235F00F66DDB /* wai_green.png in Resources */,
@@ -3585,7 +3516,6 @@
 				C662E8F81D8E232500F66DDB /* FileCustomCell.xib in Resources */,
 				C662EC271D8E235F00F66DDB /* ding_green.png in Resources */,
 				C662EA731D8E233E00F66DDB /* StopWorkFormView2.xib in Resources */,
-				C662E9CB1D8E232E00F66DDB /* LocationDisplay@2x.png in Resources */,
 				C662ED101D8E238700F66DDB /* dist.ipad.tabBar.js in Resources */,
 				C662ECF81D8E238700F66DDB /* dailyJobForm.htm in Resources */,
 				C662E9D91D8E232E00F66DDB /* maptool-locate.png in Resources */,
@@ -3602,7 +3532,6 @@
 				C662EC451D8E235F00F66DDB /* wai_red.png in Resources */,
 				C662EBAD1D8E235F00F66DDB /* button-back-white.png in Resources */,
 				C662E9A31D8E232E00F66DDB /* button-modifypwd.png in Resources */,
-				C6077C871DD0C6EC008DE3D8 /* filetype-excel48.png in Resources */,
 				C662EBD41D8E235F00F66DDB /* help@2x.png in Resources */,
 				C64556BF1E0D062D001D810F /* backIcon@2x.png in Resources */,
 				C662EC1A1D8E235F00F66DDB /* ji_orange@2x.png in Resources */,
@@ -4055,6 +3984,7 @@
 			baseConfigurationReference = 55FC424ADFE94C63D9A188ED /* Pods-KSJC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C5Y43433E6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(HOME)/Library/SDKs/ArcGIS/**",
@@ -4075,6 +4005,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dist.KSJCMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "512cfb04-e24d-4e8f-af92-57d00e104d14";
+				PROVISIONING_PROFILE_SPECIFIER = "KSJC map develop";
 				VALID_ARCHS = "armv7s armv7";
 			};
 			name = Debug;
@@ -4084,6 +4016,8 @@
 			baseConfigurationReference = 926787D810BDD2A784DAF132 /* Pods-KSJC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = C5Y43433E6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(HOME)/Library/SDKs/ArcGIS/**",
@@ -4094,7 +4028,7 @@
 				INFOPLIST_FILE = KSJC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-all_load",
@@ -4104,6 +4038,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dist.KSJCMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "78bf8d9a-eba4-4e3d-9032-320a215226c5";
+				PROVISIONING_PROFILE_SPECIFIER = "KSJC map distribute";
 				VALID_ARCHS = "armv7s armv7";
 			};
 			name = Release;

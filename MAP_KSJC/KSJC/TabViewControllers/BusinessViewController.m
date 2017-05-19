@@ -44,11 +44,16 @@ static BOOL nibsRegistered = NO;
 {
     [self loadAllData];
 }
+- (void)addXCLog:(NSNotification *)notification
+{
+    NSDictionary *dic = notification.object;
+    [self popXCJMwith:dic[@"projectInfo"] andwithMaterialA:dic[@"material"]];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshData) name:kUpdateBusinessViewController object:nil];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addXCLog:) name:kAddXCLogNotification object:nil];
     _pagesize = @"100";
     if (_newDailyJobViewController == nil) {
         //新建巡查界面

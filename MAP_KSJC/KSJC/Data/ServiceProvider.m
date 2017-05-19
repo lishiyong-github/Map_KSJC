@@ -206,6 +206,7 @@
 }
 
 -(void)callbackDidFail:(NSError *)error{
+    NSLog(@"******************************************\n %@",[error description]);
     if (!killed && self.delegate) {
         [self.delegate serviceCallback:self requestFaild:error];
     }

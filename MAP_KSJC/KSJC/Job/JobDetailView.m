@@ -2565,7 +2565,18 @@
 //点击弹出框(开始巡查)
 -(void)newDailyJobwithDict:(NSMutableDictionary *)dict andwithMaterialA:(NSMutableArray *)matrialA
 {
-    [self.delegate popXCJMwith:dict andwithMaterialA:matrialA];
+    if ([self.delegate isKindOfClass:[UIViewController class]]) {
+        UIViewController *controller = (UIViewController *)self.delegate;
+        [controller dismissViewControllerAnimated:NO completion:^{
+            NSDictionary *dic = @{@"projectInfo":dict,
+                                  @"material":matrialA};
+            [[NSNotificationCenter defaultCenter] postNotificationName:kAddXCLogNotification object:dic];
+        }];
+    }else{
+        if ([self.delegate respondsToSelector:@selector(popXCJMwith:andwithMaterialA:)]) {
+            [self.delegate popXCJMwith:dict andwithMaterialA:matrialA];
+        }
+    }
 }
 
 -(CGFloat)returnCellHeight:(NSString *)string withLever:(NSInteger)lever

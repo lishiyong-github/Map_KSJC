@@ -27,6 +27,8 @@
 #define defaults [NSUserDefaults standardUserDefaults]
 //check Null String
 #define checkNullString(a) a.length?a:@""
+//notification
 static NSString *kUpdateBusinessViewController = @"kUpdateBusinessViewController";
+static NSString *kAddXCLogNotification = @"kAddXCLogNotification";
 
 #endif
